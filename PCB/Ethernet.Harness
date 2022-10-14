@@ -1,0 +1,4 @@
+Data Interface Pins=TX_ER,TX_CLK,TX_EN,TX_D3,TX_D2,TX_D1,TX_D0,RX_CLK,RX_ER,RX_DV,RX_D0,RX_D1,RX_D2,RX_D3,CRS,COL
+JTAG=TDI,TDO,TMS,TCK,TRST
+MII Control Interface Pins=MDDIS,MDC,MDIO,MDINT
+MII Signal Descriptions={DATA:Data Interface Pins},{MII:MII Control Interface Pins},{JTAG:JTAG}
