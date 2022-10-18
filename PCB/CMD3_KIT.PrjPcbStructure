@@ -1,7 +1,7 @@
 Record=TopLevelDocument|FileName=Top.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=C-Link_Interface|SchDesignator=C-Link_Interface|FileName=C-Link.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=C-Link.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=Ethernet|SchDesignator=Ethernet|FileName=Ethernet.SchDoc|SheetNumber=5|SymbolType=Normal|RawFileName=Ethernet.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
 Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=FPGA|SchDesignator=FPGA|FileName=FPGA.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=FPGA.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
-Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=U_C-Link|SchDesignator=U_C-Link|FileName=C-Link.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=C-Link.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
-Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=U_Ethernet|SchDesignator=U_Ethernet|FileName=Ethernet.SchDoc|SheetNumber=5|SymbolType=Normal|RawFileName=Ethernet.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
-Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=U_USB|SchDesignator=U_USB|FileName=USB.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=USB.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top.SchDoc|Designator=USB|SchDesignator=USB|FileName=USB.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=USB.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
 Record=NoMainPathDocument|SourceDocument=Top.SchDoc|FileName=Peripherals.SchDoc|SheetNumber=7
 Record=NoMainPathDocument|SourceDocument=Top.SchDoc|FileName=Power.SchDoc|SheetNumber=6
