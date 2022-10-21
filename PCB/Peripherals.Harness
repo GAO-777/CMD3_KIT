@@ -1,2 +1,3 @@
 Indicators=Clock_Light,OK_Light,ERR_Light,Eth0_Activity,USB_Activity
+User_Button=User_Button_1,User_Button_2,User_Button_3
 USER_LEDs=LED_1,LED_2,LED_3,LED_4,LED_5,LED_6,LED_7,LED_8,LED_9,LED_10,LED_11,LED_12,LED_13,LED_14,LED_15,LED_16
