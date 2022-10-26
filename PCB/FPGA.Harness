@@ -1,6 +1,6 @@
 C-LINK=CLK,DATA,TX/RX
 Data Interface Pins=TX_ER,TX_CLK,TX_EN,TX_D3,TX_D2,TX_D1,TX_D0,RX_CLK,RX_ER,RX_DV,RX_D0,RX_D1,RX_D2,RX_D3,CRS,COL
-Indicators=Clock_Light,OK_Light,ERR_Light,Eth0_Activity,USB_Activity
+Indicators=Status_1,Status_2,Status_3,Status_4,Status_5,C_Link_Activity,Eth0_Activity,USB_Activity
 MII Control Interface Pins=MDDIS,MDC,MDIO,MDINT
 MII Signal Descriptions={DATA:Data Interface Pins},{MII:MII Control Interface Pins},{JTAG:JTAG}
 USB={DATA:USB_D},{CTRL:USB_CTR}
