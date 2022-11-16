@@ -28,6 +28,10 @@ bit BARQ_OR;
 bit BAGD_OR;
 bit AddressValid;
 bit End_Cycle;
+bit Data_Strobe_Shaper_q;
+bit DataStr_Trig_q;
+bit TimeOut;
+bit DataStr_q;
 
 bit [DeviceMaxNumber-1:0] BARQ_inBuff_q;
 
@@ -94,10 +98,51 @@ assign BARQ_OR = |BARQ_inBuff_q;
 
 assign BAGD_OR = |BAGD_outBuff_q;
 
-DFF AddressValid_Trig(.clrn(1'b1), .clk(clk), .d(BAGD_OR), .q(AddressValid))
+REG AddressValid_Trig(.clrn(1'b1), .clk(clk), .d(BAGD_OR), .q(AddressValid)) // AddressValid is one clock late of BAGD
+
+// From "Target Ready" to "Data Strobe" control--Shaping one clock width pulse from positive edge of Target Ready
+ EdgeSensingSV Data_Strobe_Shaper
+(
+	.clk		(clk),   
+	.reset 	(End_Cycle),   
+	.d			(TargetReady),   	   
+	.q_r		(Data_Strobe_Shaper_q)      
+);
+
+REG		DataStr
+(
+	.clk	(clk),
+	.ena	(1'b1),
+	.clrn	(1'b1),
+	.d		(Data_Strobe_Shaper_q | TimeOut),
+	.q		(DataStr_q)
+);
+
+REG		DataStr_Trig
+(
+	.clk	(clk),
+	.ena	(1'b1),
+	.clrn	(1'b1),
+	.d		(DataStr_q),
+	.q		(DataStr_Trig_q)
+);
+
+assign DataStrobe = DataStr_Trig_q;
+  
+REG		DataStr_Trig
+(
+	.clk	(clk),
+	.ena	(1'b1),
+	.clrn	(1'b1),
+	.d		(DataStr_Trig_q | Reset),
+	.q		(End_Cycle)
+);
+ 
+// Time_Out Timer: Starts  on "Target Ready" , Cleared at next clock of DataStrobe
 
 
-  
-  
-  
+
+TimeOutCnt.(clock, sclr, cnt_en) = (clock, End_Cycle, AddressValid);-- Count enabled when Address Valid
+  TimeOut	=	DFF (.d=(TimeOutCnt.q[] == ClockMaxTimout ), .clk=clock);
+  ErrorLight = TimeOut;  -- Error marker for external light
 endmodule:Arbiter
