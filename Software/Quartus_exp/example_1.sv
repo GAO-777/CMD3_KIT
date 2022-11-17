@@ -40,7 +40,7 @@ Arbiter #(.DeviceMaxNumber (4))            Arbiter_inst
 	.reset (BARQ[3]),   
 	.d		(BARQ[0]),   	   
 	.q_r		(Error[1])      
-);*/
+);
 
 
  Counter Counter_inst [1:0];
@@ -53,7 +53,19 @@ Arbiter #(.DeviceMaxNumber (4))            Arbiter_inst
     .ena 	(BARQ[2]),         
     .q		(Error)
 );
-
+*/
+Shiftreg ffdd
+(
+    .clk			(clk),
+    .en			(BARQ[0]),
+    .load		('1),
+    .data		('1),
+    .shiftin	(BARQ[1]),
+    .sclr		('1),
+    
+    .q			(Error[0]),
+    .shiftout	(Error[1][0])
+);
 
 
 endmodule:example_1

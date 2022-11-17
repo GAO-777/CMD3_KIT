@@ -1,537 +1,499 @@
 # do 01_modelsim_script.tcl
-# 
-# !>7405< A>1AB25==CN 181;8>B5:C 87 A2>8 <>4C;59
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >A=>2=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:55:15 on Nov 17,2022
+# Start time: 20:02:41 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 13:55:15 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:02:41 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:55:15 on Nov 17,2022
+# Start time: 20:02:41 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 13:55:15 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:02:41 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:02:41 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# vsim -c -voptargs=""+acc"" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 13:55:15 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:02:41 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs=""+acc"" testbench 
+# Start time: 20:02:41 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlfty24fjy".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfty24fjy
-# 
-# run the simulation
-# run 400 ns 
-# 
-# 
-# expand the signals time diagram
-# wave zoom full
+# Loading work.Shiftreg
+# ** Warning: (vsim-3015) testbench.sv(87): [PCDPC] - Port size (8) does not match connection size (1) for port 'data'. The port definition is at: ../Shiftreg.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/Shiftreg_inst File: ../Shiftreg.sv
 # 0 ps
 # 420 ns
 do 01_modelsim_script.tcl
-# 
-# puts "@825B, 8@ -  :02KG:0E"
-# !>7405< A>1AB25==CN 181;8>B5:C 87 A2>8 <>4C;59
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >A=>2=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:37 on Nov 17,2022
+# Start time: 20:05:10 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 13:56:37 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:05:10 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:56:37 on Nov 17,2022
+# Start time: 20:05:10 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 13:56:37 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:05:10 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:05:10 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 13:56:38 on Nov 17,2022, Elapsed time: 0:01:23
-# Errors: 0, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 13:56:38 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:05:10 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:05:11 on Nov 17,2022, Elapsed time: 0:02:30
+# Errors: 0, Warnings: 1
+# vsim -c -voptargs=""+acc"" testbench 
+# Start time: 20:05:11 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlftesf1gb".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftesf1gb
-# 
-# run the simulation
-# run 400 ns 
-# 
-# 
-# expand the signals time diagram
-# wave zoom full
+# Loading work.Shiftreg
 # 0 ps
 # 420 ns
 do 01_modelsim_script.tcl
-# 
-# 8@5:B>@8O 4;O A:><?8;8@>20==KE 181;8>B5:
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >AB0;L=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:13 on Nov 17,2022
+# Start time: 20:06:08 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 14:03:13 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:06:08 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:13 on Nov 17,2022
+# Start time: 20:06:08 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 14:03:13 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:06:08 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:08 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 14:03:14 on Nov 17,2022, Elapsed time: 0:06:36
-# Errors: 0, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 14:03:14 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:06:08 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:06:09 on Nov 17,2022, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs=""+acc"" testbench 
+# Start time: 20:06:09 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlft5gh8ea".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft5gh8ea
-# 
-# 0?CA:05< A8<C;OF8N =0 >?@545;5==@5 2@5<O
-# run 400 ns 
-# 
-# 
-#  0725@=CBL 2@5<5==CN 4803@0<<C A83=0;>2
-# wave zoom full
+# Loading work.Shiftreg
 # 0 ps
 # 420 ns
 do 01_modelsim_script.tcl
-# 
-# 8@5:B>@8O 4;O A:><?8;8@>20==KE 181;8>B5:
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >AB0;L=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:34 on Nov 17,2022
+# Start time: 20:07:03 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 14:03:34 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:07:03 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:34 on Nov 17,2022
+# Start time: 20:07:03 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 14:03:34 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:07:03 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:04 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L D:/Program_0Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 14:03:35 on Nov 17,2022, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L D:/Program_аFiles/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 14:03:35 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:07:04 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:07:04 on Nov 17,2022, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:07:04 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
-# ** Error (suppressible): (vsim-19) Failed to access library 'D:/Program_аFiles/Quartus18/modelsim_ase/altera/verilog/altera_mf' at "D:/Program_аFiles/Quartus18/modelsim_ase/altera/verilog/altera_mf".
-# No such file or directory. (errno = ENOENT)
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlftvva9qh".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvva9qh
-# 
-# 0?CA:05< A8<C;OF8N =0 >?@545;5==@5 2@5<O
-# run 400 ns 
-# 
-# 
-#  0725@=CBL 2@5<5==CN 4803@0<<C A83=0;>2
-# wave zoom full
-# 0 ps
+# Loading work.Shiftreg
+# 0 ns
 # 420 ns
 do 01_modelsim_script.tcl
-# 
-# 8@5:B>@8O 4;O A:><?8;8@>20==KE 181;8>B5:
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >AB0;L=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:06:30 on Nov 17,2022
+# Start time: 20:11:06 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 14:06:30 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:11:06 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:06:30 on Nov 17,2022
+# Start time: 20:11:06 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 14:06:30 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:11:06 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:11:06 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L /modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 14:06:31 on Nov 17,2022, Elapsed time: 0:02:56
-# Errors: 1, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L /modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 14:06:31 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:11:06 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:11:07 on Nov 17,2022, Elapsed time: 0:04:03
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:11:07 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
-# ** Error (suppressible): (vsim-19) Failed to access library '/modelsim_ase/altera/verilog/altera_mf' at "/modelsim_ase/altera/verilog/altera_mf".
-# No such file or directory. (errno = ENOENT)
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlfthsyn2y".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfthsyn2y
-# 
-# 0?CA:05< A8<C;OF8N =0 >?@545;5==@5 2@5<O
-# run 400 ns 
-# 
-# 
-#  0725@=CBL 2@5<5==CN 4803@0<<C A83=0;>2
-# wave zoom full
-# 0 ps
+# Loading work.Shiftreg
+# 0 ns
 # 420 ns
 do 01_modelsim_script.tcl
-# 
-# 8@5:B>@8O 4;O A:><?8;8@>20==KE 181;8>B5:
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >AB0;L=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:10:18 on Nov 17,2022
+# Start time: 20:12:38 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 14:10:18 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:12:38 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:10:18 on Nov 17,2022
+# Start time: 20:12:38 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 14:10:18 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:12:38 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:38 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L /modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 14:10:19 on Nov 17,2022, Elapsed time: 0:03:48
-# Errors: 1, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L /modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 14:10:19 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:12:38 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:12:39 on Nov 17,2022, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:12:39 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
-# ** Error (suppressible): (vsim-19) Failed to access library '/modelsim_ase/altera/verilog/altera_mf' at "/modelsim_ase/altera/verilog/altera_mf".
-# No such file or directory. (errno = ENOENT)
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlftn3aav4".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftn3aav4
-# 
-# 0?CA:05< A8<C;OF8N =0 >?@545;5==@5 2@5<O
-# run 400 ns 
-# 
-# 
-#  0725@=CBL 2@5<5==CN 4803@0<<C A83=0;>2
-# wave zoom full
-# 0 ps
+# Loading work.Shiftreg
+# 0 ns
 # 420 ns
 do 01_modelsim_script.tcl
-# 
-# 8@5:B>@8O 4;O A:><?8;8@>20==KE 181;8>B5:
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >AB0;L=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:11:06 on Nov 17,2022
+# Start time: 20:14:48 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 14:11:06 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:14:48 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:11:06 on Nov 17,2022
+# Start time: 20:14:48 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 14:11:06 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:14:48 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:14:48 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 14:11:07 on Nov 17,2022, Elapsed time: 0:00:48
-# Errors: 1, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 14:11:07 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:14:48 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:14:49 on Nov 17,2022, Elapsed time: 0:02:10
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:14:49 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlft2jgxz5".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft2jgxz5
-# 
-# 0?CA:05< A8<C;OF8N =0 >?@545;5==@5 2@5<O
-# run 400 ns 
-# 
-# 
-#  0725@=CBL 2@5<5==CN 4803@0<<C A83=0;>2
-# wave zoom full
-# 0 ps
+# Loading work.Shiftreg
+# 0 ns
 # 420 ns
-# 
-# pwd
-# D:/Cloud/GitHub/CMD3_KIT/Software/lib/ModelSim
 do 01_modelsim_script.tcl
-# 
-# 8@5:B>@8O 4;O A:><?8;8@>20==KE 181;8>B5:
-# vlib work_db
-# ** Warning: (vlib-34) Library already exists at "work_db".
-# 
-# CBL : A:><?8;8@>20==K< 181;8>B5:0< Alter'K
-# 	D:\Gorkovenko\Library\ModelSim\altera\verilog\
-# 
-# CBL : A>1AB25==K< 181;8>B5G=K< D09;0<
-#	D:\Gorkovenko\Library\Quartus\Main_LIB\
-# 
-#vcom -work work D:/Program_Files/ModelSim16_1/modelsim_ase/altera/verilog/eda/sim_lib/altera_mf.vhd
-# 
-# ><?8;8@C5< D09;K
-#	"5AB15=G 8 >AB0;L=K5 D09;K
-# vlog -sv testbench.sv
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:11:41 on Nov 17,2022
+# Start time: 20:16:33 on Nov 17,2022
 # vlog -reportprogress 300 -sv testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 14:11:41 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:16:33 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv ../Counter.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:11:41 on Nov 17,2022
+# Start time: 20:16:33 on Nov 17,2022
 # vlog -reportprogress 300 -sv ../Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 14:11:41 on Nov 17,2022, Elapsed time: 0:00:00
+# End time: 20:16:33 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:16:33 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
 # 
-# 
-# 0?CA:05< A8<C;OB>@ 
-# vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# End time: 14:11:42 on Nov 17,2022, Elapsed time: 0:00:35
-# Errors: 0, Warnings: 2
-# vsim -c -voptargs=""+acc"" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
-# Start time: 14:11:42 on Nov 17,2022
+# Top level modules:
+# 	Shiftreg
+# End time: 20:16:33 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:16:34 on Nov 17,2022, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:16:34 on Nov 17,2022
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.Counter
-# 
-# 
-# K2>48< 2A5 A83=0;K
-# add wave sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Gorkov  Hostname: L2-GORKOVENKO  ProcessID: 8440
-#           Attempting to use alternate WLF file "./wlftgdngne".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftgdngne
-# 
-# 0?CA:05< A8<C;OF8N =0 >?@545;5==@5 2@5<O
-# run 400 ns 
-# 
-# 
-#  0725@=CBL 2@5<5==CN 4803@0<<C A83=0;>2
-# wave zoom full
-# 0 ps
+# Loading work.Shiftreg
+# 0 ns
 # 420 ns
-# 
-# vsim pwd
-# End time: 14:11:45 on Nov 17,2022, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 2
-# vsim pwd 
-# Start time: 14:11:45 on Nov 17,2022
-# ** Error: (vsim-3170) Could not find 'pwd'.
-#         Searched libraries:
-#             d:/Cloud/GitHub/CMD3_KIT/Software/lib/ModelSim/work
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./01_modelsim_script.tcl PAUSED at line 34
-# End time: 14:12:01 on Nov 17,2022, Elapsed time: 0:00:16
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:18:29 on Nov 17,2022
+# vlog -reportprogress 300 -sv testbench.sv 
+# -- Compiling module testbench
+# ** Error: (vlog-13069) testbench.sv(83): near "Shiftreg_data": syntax error, unexpected IDENTIFIER, expecting ';'.
+# End time: 20:18:29 on Nov 17,2022, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/18.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./01_modelsim_script.tcl line 16
+# C:/intelFPGA/18.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv testbench.sv"
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:18:39 on Nov 17,2022
+# vlog -reportprogress 300 -sv testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:18:39 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:18:39 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Counter.sv 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 20:18:39 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:18:39 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 20:18:39 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:18:40 on Nov 17,2022, Elapsed time: 0:02:06
+# Errors: 4, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:18:40 on Nov 17,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:17 on Nov 17,2022
+# vlog -reportprogress 300 -sv testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:21:17 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:17 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Counter.sv 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 20:21:17 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:17 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 20:21:17 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:21:18 on Nov 17,2022, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:21:18 on Nov 17,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:21 on Nov 17,2022
+# vlog -reportprogress 300 -sv testbench.sv 
+# -- Compiling module testbench
+# ** Error: (vlog-13069) testbench.sv(88): near "#": syntax error, unexpected '#', expecting ';'.
+# End time: 20:22:21 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/18.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./01_modelsim_script.tcl line 16
+# C:/intelFPGA/18.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv testbench.sv"
+
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:55 on Nov 17,2022
+# vlog -reportprogress 300 -sv testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:22:55 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:55 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Counter.sv 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 20:22:55 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:55 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 20:22:55 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:22:56 on Nov 17,2022, Elapsed time: 0:01:38
+# Errors: 4, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:22:56 on Nov 17,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:23:46 on Nov 17,2022
+# vlog -reportprogress 300 -sv testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:23:46 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:23:46 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Counter.sv 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 20:23:46 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:23:46 on Nov 17,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 20:23:46 on Nov 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:23:47 on Nov 17,2022, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 20:23:47 on Nov 17,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+# End time: 20:24:26 on Nov 17,2022, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 0

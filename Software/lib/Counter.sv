@@ -24,7 +24,7 @@ begin
         counter_s <= '0;
     else if (~sclr)
         counter_s <= '0;
-    else if (ena)
+    else if (en)
         counter_s <= counter_s + 1'd1;
     else 
         counter_s <= counter_s;
