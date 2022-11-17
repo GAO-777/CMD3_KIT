@@ -4,7 +4,7 @@ module Arbiter
 )
 (
 	input  clk,			// System clock
-	input  Reset,       // Active High
+	input  reset,       // Active High
 	
 // - - - HandShake Begin - - - //
 // Requestes from Master devices to bus access to 

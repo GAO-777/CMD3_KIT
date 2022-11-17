@@ -5,7 +5,7 @@ module example_1
     input Reset,
     input [DeviceMaxNumber-1:0]BARQ,
     output [DeviceMaxNumber-1:0]BAGD,
-    output [2:0]Error
+    output [1:0][7:0]Error
 );
 
 
@@ -25,7 +25,7 @@ Arbiter #(.DeviceMaxNumber (4))            Arbiter_inst
 	.TargetReady	(TargetReady),
 	.DataStrobe	    (DataStrobe),
 	.Error	        (Error)
-);*/
+);
  Edge_Sensing_Sync dd
 (
   .clk		(clk),	
@@ -40,6 +40,18 @@ Arbiter #(.DeviceMaxNumber (4))            Arbiter_inst
 	.reset (BARQ[3]),   
 	.d		(BARQ[0]),   	   
 	.q_r		(Error[1])      
+);*/
+
+
+ Counter Counter_inst [1:0];
+ 
+ Counter_inst
+(
+    .clk 	(clk),     
+    .clrn	(BARQ[0]),             
+    .sclr	(BARQ[1]),        
+    .ena 	(BARQ[2]),         
+    .q		(Error)
 );
 
 

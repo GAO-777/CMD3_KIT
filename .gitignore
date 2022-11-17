@@ -6,3 +6,5 @@ db/
 incremental_db/
 output_files/
 Software/Quartus_exp/output_files/
+work_db/
+.wlf

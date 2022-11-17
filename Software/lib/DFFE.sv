@@ -1,7 +1,7 @@
 /*
-	DFFE примитив (триггер D-типа с разрешающим входом ENA)
+	DFFE примитив (триггер D-типа с разрешающим входом en)
 	+----------------------------+
-	| CLRN | CLK  | ENA | D | Q  |
+	| clrn | clk  | en  | d | q  |
 	+----------------------------+	
 	|  L   |  X   | X   | X | L  |
 	|  H   |  X   | L   | X | Qo |
@@ -11,39 +11,33 @@
 	|  H   |  H   | H   | X | Qo |
 	+----------------------------+
 
-	DFFE #(?) ?NAME?(.clrn(), .clk(), .ena(), .d(), .q());
+	DFFE #(?) ?NAME?(.clrn(), .clk(), .en(), .d(), .q());
 */
 
 `timescale 1ns / 10ps
 
 module DFFE
-#(	parameter W = 1 )
 (
-	input bit		clrn,			// Асинхронный сброс 
+	input bit		clrn,			
 	input bit		clk,
-	input bit		[W-1 : 0]ena,	// Разрешение на запись
-	input bit		[W-1 : 0]d,
-	output bit		[W-1 : 0]q
+	input bit		en,	
+	input bit		d,
+	output bit		q
 );
 
-bit [W-1 : 0]Q;
+bit q_s;
 
-genvar i;
-generate 
-	for (i = 0; i < W; i = i + 1) 
-	begin : generate_DFFE
+always_ff @(posedge clk or negedge clrn)
+	begin
+	if(~clrn)
+		q_s <= 1'b0;
+	else if(en)
+		q_s <= d;
+	end
 	
-	always_ff @(posedge clk or negedge clrn)
-		begin
-		if(!clrn)
-			Q[i] <= 1'b0;
-		else if(ena[i])
-			Q[i] <= d[i];
-		end
-		
-    end
+end
 endgenerate
 
-assign #1 q = Q;
+assign #1 q = q_s;
 
 endmodule:DFFE

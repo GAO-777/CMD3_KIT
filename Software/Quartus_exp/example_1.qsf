@@ -51,6 +51,7 @@ set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name SYSTEMVERILOG_FILE ../lib/Counter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../lib/EdgeSensingSV.sv
 set_global_assignment -name AHDL_FILE ../lib/Edge_Sensing_Sync.tdf
 set_global_assignment -name SYSTEMVERILOG_FILE example_1.sv
