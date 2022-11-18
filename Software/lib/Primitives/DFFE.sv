@@ -11,21 +11,33 @@
 	|  H   |  H   | H   | X | Qo |
 	+----------------------------+
 
-	DFFE #(?) ?NAME?(.clrn(), .clk(), .en(), .d(), .q());
+Один экземпляр
+DFFE ?NAME?(.clrn(), .clk(), .en(), .d(), .q());
+
+Один и более экземпляр    
+DFFE        ?NAME?[(MAX-1) : 0]
+(
+    .clk    (), 
+    .clrn   (), 
+    .en     (), 
+    .d      (), 
+    .q      ()
+);
+    
 */
 
 `timescale 1ns / 10ps
 
 module DFFE
 (
-	input bit		clrn,			
-	input bit		clk,
-	input bit		en,	
-	input bit		d,
-	output bit		q
+	input  logic clk,
+	input  logic clrn,			
+	input  logic en,	
+	input  logic d,
+	output logic q
 );
 
-bit q_s;
+logic q_s;
 
 always_ff @(posedge clk or negedge clrn)
 	begin

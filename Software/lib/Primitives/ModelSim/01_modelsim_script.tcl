@@ -13,9 +13,9 @@ vlib work
 
 # Компилируем файлы
 #	Тестбенч и остальные файлы
-vlog -sv testbench.sv
-vlog -sv ../Counter.sv
-vlog -sv ../Shiftreg.sv
+vlog -sv testbench.sv -work work
+vlog -sv ../Counter.sv -work work
+vlog -sv ../Shiftreg.sv -work work
 
 # Запускаем симулятор 
 #vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
@@ -23,7 +23,10 @@ vsim -t 1ns -c -voptargs="+acc" testbench
 
 
 # Выводим все сигналы
-add wave sim:/testbench/*
+#add wave sim:/testbench/*
+
+# Выводим сигналы согласно скрипту
+do wave.do
 
 # Запускаем симуляцию на определеннре время
 run 400 ns 

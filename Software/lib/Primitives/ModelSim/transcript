@@ -1,0 +1,222 @@
+# do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:44:49 on Nov 18,2022
+# vlog -reportprogress 300 -sv testbench.sv -work work 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:44:49 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:44:49 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Counter.sv -work work 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 13:44:49 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:44:49 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv -work work 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 13:44:49 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 13:44:50 on Nov 18,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# ** Warning: (vsim-3017) testbench.sv(106): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/Shiftreg_inst File: ../Shiftreg.sv
+# ** Warning: (vsim-3722) testbench.sv(106): [TFMPC] - Missing connection for port 'clrn'.
+# 0 ns
+# 420 ns
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:48:27 on Nov 18,2022
+# vlog -reportprogress 300 -sv testbench.sv -work work 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:48:27 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:48:27 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Counter.sv -work work 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 13:48:27 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:48:27 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv -work work 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 13:48:27 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:48:28 on Nov 18,2022, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 2
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 13:48:28 on Nov 18,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftreg_en'.
+# Executing ONERROR command at macro ./wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftreg_load'.
+# Executing ONERROR command at macro ./wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftreg_shiftin'.
+# Executing ONERROR command at macro ./wave.do line 12
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftreg_sclr'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftreg_data'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftregr_q'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/testbench/Shiftreg_shiftout'.
+# Executing ONERROR command at macro ./wave.do line 16
+# 0 ns
+# 420 ns
+add wave -position 8  sim:/testbench/shiftreg_en
+add wave -position 8  sim:/testbench/shiftreg_clrn
+add wave -position 8  sim:/testbench/shiftreg_load
+add wave -position 8  sim:/testbench/shiftreg_shiftin
+add wave -position 8  sim:/testbench/shiftreg_sclr
+add wave -position 8  sim:/testbench/shiftreg_data
+add wave -position 8  sim:/testbench/shiftregr_q
+add wave -position 8  sim:/testbench/shiftreg_shiftout
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf D:/Cloud/GitHub/CMD3_KIT/Software/lib/Primitives/ModelSim/wave.do
+add wave -position 8  sim:/testbench/shiftreg_shiftout
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:49:13 on Nov 18,2022
+# vlog -reportprogress 300 -sv testbench.sv -work work 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:49:13 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:49:13 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Counter.sv -work work 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 13:49:13 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:49:13 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv -work work 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 13:49:13 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:49:14 on Nov 18,2022, Elapsed time: 0:00:46
+# Errors: 21, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 13:49:14 on Nov 18,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:49:51 on Nov 18,2022
+# vlog -reportprogress 300 -sv testbench.sv -work work 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:49:51 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:49:51 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Counter.sv -work work 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 13:49:51 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:49:51 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv -work work 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 13:49:51 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:49:52 on Nov 18,2022, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 13:49:52 on Nov 18,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+do 01_modelsim_script.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:12 on Nov 18,2022
+# vlog -reportprogress 300 -sv testbench.sv -work work 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:51:12 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:12 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Counter.sv -work work 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 13:51:12 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:12 on Nov 18,2022
+# vlog -reportprogress 300 -sv ../Shiftreg.sv -work work 
+# -- Compiling module Shiftreg
+# 
+# Top level modules:
+# 	Shiftreg
+# End time: 13:51:12 on Nov 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:51:13 on Nov 18,2022, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -c -voptargs=""+acc"" testbench 
+# Start time: 13:51:13 on Nov 18,2022
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.Counter
+# Loading work.Shiftreg
+# 0 ns
+# 420 ns
+# End time: 13:51:58 on Nov 18,2022, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 0

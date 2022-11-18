@@ -1,71 +1,44 @@
 module example_1
 #( DeviceMaxNumber = 4)
 (
-    input clk,
-    input Reset,
-    input [DeviceMaxNumber-1:0]BARQ,
+    input clrn,
+    input [1:0]d,
+    output  [1:0]q,
+
+    input  clk,
+    input  reset,
+    input  [DeviceMaxNumber-1:0]BARQ,
     output [DeviceMaxNumber-1:0]BAGD,
-    output [1:0][7:0]Error
+    output AddressValid,
+    input TargetReady,
+    output DataStrobe,
+    output [1:0]Error
 );
 
 
 
-bit AddressValid;
-bit TargetReady;
-bit DataStrobe;
 
 /*
 Arbiter #(.DeviceMaxNumber (4))            Arbiter_inst
 (
-    .clk            (clk),		
-	.Reset          (Reset), 
+
+    .clk            (clk),
+    .reset          (reset),
 	.BARQ           (BARQ),
 	.BAGD           (BAGD),
  	.AddressValid	(AddressValid),
 	.TargetReady	(TargetReady),
 	.DataStrobe	    (DataStrobe),
 	.Error	        (Error)
-);
- Edge_Sensing_Sync dd
-(
-  .clk		(clk),	
-  .clr	(BARQ[0]),
-  .d		(BARQ[1]),
-  .ena		(BARQ[2]),
-  .q			(Error[0])
-);
- EdgeSensingSV ff
-(
-	.clk		(clk),   
-	.reset (BARQ[3]),   
-	.d		(BARQ[0]),   	   
-	.q_r		(Error[1])      
-);
+);*/
 
 
- Counter Counter_inst [1:0];
+dff ddd 
+(
+    .clk    (clk), 
+    .clrn   (clrn),         
+    .d      (d), 
+    .q      (q)
+);
  
- Counter_inst
-(
-    .clk 	(clk),     
-    .clrn	(BARQ[0]),             
-    .sclr	(BARQ[1]),        
-    .ena 	(BARQ[2]),         
-    .q		(Error)
-);
-*/
-Shiftreg ffdd
-(
-    .clk			(clk),
-    .en			(BARQ[0]),
-    .load		('1),
-    .data		('1),
-    .shiftin	(BARQ[1]),
-    .sclr		('1),
-    
-    .q			(Error[0]),
-    .shiftout	(Error[1][0])
-);
-
-
 endmodule:example_1
