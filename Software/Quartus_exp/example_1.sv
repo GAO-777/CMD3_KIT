@@ -18,27 +18,21 @@ module example_1
 
 
 
-/*
-Arbiter #(.DeviceMaxNumber (4))            Arbiter_inst
+
+Arbiter1 #(.DEVICE_MAX_NUMBER (4))            Arbiter_inst
 (
 
     .clk            (clk),
     .reset          (reset),
-	.BARQ           (BARQ),
-	.BAGD           (BAGD),
- 	.AddressValid	(AddressValid),
-	.TargetReady	(TargetReady),
-	.DataStrobe	    (DataStrobe),
-	.Error	        (Error)
-);*/
-
-
-dff ddd 
-(
-    .clk    (clk), 
-    .clrn   (clrn),         
-    .d      (d), 
-    .q      (q)
+	.barq           (BARQ),
+	.bagd           (BAGD)
+ 	//.AddressValid	(AddressValid),
+	//.TargetReady	(TargetReady),
+	//.DataStrobe	    (DataStrobe),
+	//.Error	        (Error)
 );
+
+
+
  
 endmodule:example_1
