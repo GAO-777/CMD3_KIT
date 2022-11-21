@@ -6,5 +6,9 @@ db/
 incremental_db/
 output_files/
 Software/Quartus_exp/output_files/
-work_db/
+work/
 .wlf
+*.bak
+Software/lib/Modules/ModelSim/work/
+*transcript
+.qsf

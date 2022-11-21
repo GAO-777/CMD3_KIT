@@ -22,7 +22,7 @@ module Arbiter1
 logic [DEVICE_MAX_NUMBER-1:0] barq_trig = '0;
 logic [DEVICE_MAX_NUMBER-1:0] bagd_trig = '0;
 logic [DEVICE_MAX_NUMBER-1:0] sel_master;
-logic end_cycle = '0;
+logic end_cycle;
 
 always_ff @(posedge clk) begin
 	if(end_cycle)
@@ -48,12 +48,17 @@ generate
 endgenerate
 assign sel_master[0] = barq_trig[0];
 
-always_ff @(posedge clk) 
-	bagd_trig <= sel_master ;//& {DEVICE_MAX_NUMBER{~end_cycle}};
+always_ff @(posedge clk) begin
+	bagd_trig <= sel_master;
+	
+	if(end_cycle)
+		bagd_trig <= '0;
+	end
+
 
 assign bagd_o = bagd_trig; 
 
-logic [4:0]address_valid_delay = '0; // увеличил до 4 чтоб strobe был 2 такта ???
+logic [2:0]address_valid_delay = '0; // увеличил до 4 чтоб strobe был 2 такта ???
 logic [6:0]timeout_cnt = '0;
 logic timeout = '0;
 
@@ -62,38 +67,40 @@ logic timeout = '0;
 always_ff @(posedge clk) begin 
 	target_ready_o <= |bagd_trig;
 
-	
-	
+
 	if (target_ready_o)
 		address_valid_delay[0] <= address_valid_i;
 	else 
 		address_valid_delay[0] <= '0;
 	
-	address_valid_delay[4:1] <= address_valid_delay[3:0];
+	address_valid_delay[2:1] <= address_valid_delay[1:0];
 	
+
 	
 	/*
 	if (address_valid_delay[2] & ~address_valid_delay[3])
 		data_strobe_o <= '1;
 	else
 		data_strobe_o <= '0;	*/
-	data_strobe_o <= (address_valid_delay[2] & ~address_valid_delay[4]);// | error;
+	data_strobe_o <= (address_valid_delay[1] & ~address_valid_delay[2]);// | error;
 	
 	// - - - Counter - - - //
-	if(end_cycle)
-		timeout_cnt <= '0;
-	else
-		if(|bagd_trig)
+
+	if(|bagd_trig)
 			timeout_cnt <= timeout_cnt + 1'b1;
 		else timeout_cnt <= timeout_cnt;
 	
 	timeout <= (timeout_cnt == CLK_MAX_TIMEOUT);  
 	
-	end_cycle <= data_strobe_o | timeout; 
-	
+	//end_cycle <= /*data_strobe_o*/address_valid_delay[2] | timeout; 
+	if (end_cycle) begin
+		address_valid_delay <= '0;
+		timeout_cnt <= '0;
+		end
 	error_o <= timeout;
 end
 
+assign end_cycle = data_strobe_o /*address_valid_delay[2]*/ | timeout;  
 
 /*
 --************ Bus Access Chronogram Generation ******************************

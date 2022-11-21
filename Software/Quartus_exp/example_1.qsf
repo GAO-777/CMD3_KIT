@@ -51,6 +51,7 @@ set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name SYSTEMVERILOG_FILE ../lib/Modules/arbiter_v1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../lib/Modules/Arbiter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE example_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../lib/Modules/Arbiter1.sv

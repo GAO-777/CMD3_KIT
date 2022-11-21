@@ -17,15 +17,24 @@ module example_1
 
 
 
-
-
-
  Arbiter1 
 #(
     .DEVICE_MAX_NUMBER 	(4),
     .CLK_MAX_TIMEOUT 	(10)
 )
+/*
 Arbiter_inst
+(
+	.clock				(clk),			   
+	.barq				(BARQ),
+	.bagd				(BAGD),
+	.TargetReady 	(TargetReady),
+	.addressvalid    	(AddressValid),
+	.DataStrobe		(DataStrobe),
+	.Error			(Error)
+);*/
+  
+ Arbiter_inst
 (
 	.clk				(clk),			   
 	.barq_i				(BARQ),
@@ -35,5 +44,8 @@ Arbiter_inst
 	.data_strobe_o		(DataStrobe),
 	.error_o			(Error)
 );
+ 
+ 
+
  
 endmodule:example_1
