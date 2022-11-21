@@ -9,8 +9,8 @@ module example_1
     input  reset,
     input  [DeviceMaxNumber-1:0]BARQ,
     output [DeviceMaxNumber-1:0]BAGD,
-    output AddressValid,
-    input TargetReady,
+    input AddressValid,
+    output TargetReady,
     output DataStrobe,
     output [1:0]Error
 );
@@ -19,20 +19,21 @@ module example_1
 
 
 
-Arbiter1 #(.DEVICE_MAX_NUMBER (4))            Arbiter_inst
+
+ Arbiter1 
+#(
+    .DEVICE_MAX_NUMBER 	(4),
+    .CLK_MAX_TIMEOUT 	(10)
+)
+Arbiter_inst
 (
-
-    .clk            (clk),
-    .reset          (reset),
-	.barq           (BARQ),
-	.bagd           (BAGD)
- 	//.AddressValid	(AddressValid),
-	//.TargetReady	(TargetReady),
-	//.DataStrobe	    (DataStrobe),
-	//.Error	        (Error)
+	.clk				(clk),			   
+	.barq_i				(BARQ),
+	.bagd_o				(BAGD),
+	.target_ready_o 	(TargetReady),
+	.address_valid_i 	(AddressValid),
+	.data_strobe_o		(DataStrobe),
+	.error_o			(Error)
 );
-
-
-
  
 endmodule:example_1
