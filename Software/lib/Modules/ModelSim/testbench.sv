@@ -56,17 +56,19 @@ begin
 	master_data_bus[0] = 16'd22;
 	master_data_bus[1] = 16'd444;
 	
-	master_addr_bus[0] = 16'd20;
+	master_addr_bus[0] = 16'd50;
 	master_addr_bus[1] = 16'd44;
 	master_rw[0] = '1;
 
 	barq = 0; 
 
 
-#30 barq = 1;
+#30 barq = 3;
 
 #30 barq=0;
-	 
+
+#50 barq=1;
+#30 barq=0;	 
 
 
 end
@@ -101,20 +103,20 @@ end
 	
 
 // ===== Подлючение к ШИНЕ АДРЕСА и НАПРАВЛЕНИЯ ========//
-always_ff @(posedge clk) begin
+always_comb begin
 
 // Выбранный мастер подлючается к шине
 if(|bagd)
 	for (int i=0;i<NUM_MASTERS;i++)begin
 		if (bagd[i]) begin
-			addr_bus <= master_addr_bus[i];
-			rw <= master_rw[i];
+			addr_bus = master_addr_bus[i];
+			rw = master_rw[i];
 			end
 	end		
 // Если нет местера, то все сигналы шины подтягиваются к 0		
 else begin
-	addr_bus <= '0;
-	rw <= '0;
+	addr_bus = '0;
+	rw = '0;
 	end
 // ============ Подлючение к ДАННЫХ ===================//
 // Если мастер пишет, то шина данных подлючается к нему
@@ -122,20 +124,20 @@ if(rw == '1)
 	if(|bagd) // должен быть выбран хотя бы один мастер
 		for (int i=0;i<NUM_MASTERS;i++)begin
 			if (bagd[i]) 
-				data_bus <= master_data_bus[i];	
+				data_bus = master_data_bus[i];	
 		end		
 				
 	else 
-		data_bus <= '0;
+		data_bus = '0;
 // Если мастер читает, то шина данных подлючается к ведомому
 else
 	if(|slave_address_valid) // хотя бы один ведомый должен отозваться
 			for (int i=0;i<NUM_SLAVES;i++)begin
 				if (bagd[i]) 
-					data_bus <= slave_data_bus[i];
+					data_bus = slave_data_bus[i];
 			end			
 	else 
-		data_bus <= '0;
+		data_bus = '0;
 	
 end
 

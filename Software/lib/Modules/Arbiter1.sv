@@ -68,6 +68,7 @@ always_ff @(posedge clk) begin
 	target_ready_o <= |bagd_trig;
 
 
+
 	if (target_ready_o)
 		address_valid_delay[0] <= address_valid_i;
 	else 
@@ -96,6 +97,7 @@ always_ff @(posedge clk) begin
 	if (end_cycle) begin
 		address_valid_delay <= '0;
 		timeout_cnt <= '0;
+		target_ready_o <= '0;
 		end
 	error_o <= timeout;
 end
