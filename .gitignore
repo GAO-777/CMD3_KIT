@@ -7,8 +7,8 @@ incremental_db/
 output_files/
 Software/Quartus_exp/output_files/
 work/
-.wlf
+*.wlf
 *.bak
 Software/lib/Modules/ModelSim/work/
-*transcript
-.qsf
+**/transcript
+*.qws
