@@ -3,9 +3,26 @@
 module testbench
 (
 );
-/*=================================================================*\
- - - - - - - - - - Global signals - - - - - - - - - - - - - - - - - -
-\*=================================================================*/
+
+logic quartz_clk;
+	
+initial 
+begin
+	quartz_clk ='0;
+end
+
+always 
+  #20  quartz_clk = !quartz_clk; // 25MHz
+
+
+CMD3_skeleton_project new_prj
+(
+	.quartz_clk		(quartz_clk)
+);
+
+
+
+/*
 localparam NUM_MASTERS = 2;
 localparam NUM_SLAVES = 2;
 logic clk;
@@ -31,13 +48,6 @@ logic [(NUM_SLAVES-1) : 0]slave_address_valid;
 
 
 
-/*=================================================================*\
- - - - - - - - - - Master - - - - - - - - - - - - - - - - - - - - -
-\*=================================================================*/
-
-/*=================================================================*\
- - - - - - - - - - Arbiter - - - - - - - - - - - - - - - - - - - - -
-\*=================================================================*/
 logic [(NUM_MASTERS-1) : 0][15:0]master_addr_bus;
 logic [(NUM_MASTERS-1) : 0][15:0]master_data_bus;
 logic [(NUM_MASTERS-1) : 0]master_rw;
@@ -141,11 +151,28 @@ else
 	
 end
 
-/*=================================================================*\
- - - - - - - - - - RAM-1 - - - - - - - - - - - - - - - - - - - - -
-\*=================================================================*/
 
+logic [15:0] test_ram;
 
+Dual_Port_RAM		
+#(
+	.WORD_WIDTH		(16),
+	.ADDR_WIDTH		(16),
+	.NUM_WORDS		(32)
+)
+					Dual_Port_RAM_inst
+(
+	.clk			(clk),
+	.data_a			(data_bus), 
+	.data_b			('0),
+	.addr_a			(addr_bus), 
+	.addr_b			(addr_bus),
+	.wren_a			(rw & slave_address_valid[0] & data_strobe),
+	.wren_b			('0),
+	.q_b			(test_ram)
+);
+/*
+rw & address_valid & data_strobe
 
  RAM RAM_1
 (
@@ -156,7 +183,7 @@ end
 	.data_bus_o		(slave_data_bus[0]),
 	.rw				(rw),
 	.data_strobe	(data_strobe)
-);
+);*/
 
 
 
