@@ -7,9 +7,9 @@ module USB_RAM_Reg
 	output FT_RDn,				// Запрос на чтение			
 	output FT_WR,				// Запрос на запись 
 	input  [7:0]FT_DATA_In,		
-	output [7:0]FT_DATA_Out	
+	output [7:0]FT_DATA_Out,	
 
-
+	output Packet_Proc
 );
 
 
@@ -47,6 +47,8 @@ parameter ERROR_SYMBOL              =   'hEE;
 //=============================================================================
 //					Nets
 //=============================================================================
+logic error = '0;
+
 // Процедура чтения одного слова
 logic rxf_edge;
 logic [2:0]rxf_delay;
@@ -56,9 +58,31 @@ logic rd_strobe;
 logic [(BYTE_WIDTH-1):0]rd_timing_cnt = '0;
 logic [7:0]ft_inbus_buffer = '0;
 
+// Управление процессом обработки пакета
+logic sample_enable;
+logic packet_is_in_progress;
+logic [(WORD_WIDTH-1):0]byte_number_cnt;
+logic packet_length_is_wrong;
+// Определение начального спец. символа
+logic [3:0]h_key_cnt;
+logic header_locked;
+logic header_recognized;	// спец символ зафиксирован
+// Определение конечного спец. символа
+logic [3:0]t_key_cnt;
+logic trailer_locked;
+logic trailer_recognized;
+
+logic [(WORD_WIDTH-1):0]length_of_packet;
+
 //=============================================================================
 //					Процедура чтения одного слова
 //=============================================================================
+/*
+	FT выставляет сигнал о готовности (FT_RXFn) новых данных.
+	Фиксируем фронт этого сигнала и начинаем цикл чтения одного слова.
+	Запускается счетчик, по которому по временным отметкам выставляется строб для чтения (FT_RDn) 
+		и защелкиваются параллельные данные с FIFO памяти.
+*/
 
 always_ff @(posedge clk) begin
 // Фиксируем фронт FT_RXFn. Т.е. можно прочитать данные из FIFO 
@@ -83,11 +107,84 @@ always_ff @(posedge clk) begin
 end
 
 assign FT_RDn = ~rd_strobe;
-
+	
 	
 //=============================================================================
-//					Процедура чтения одного слова
+//					Определение начального спец. символа
 //=============================================================================
+
+always_ff @(posedge clk) begin
+
+	if(sample_enable)
+		h_key_cnt <= h_key_cnt + 1'b1;
+	if(header_locked | (ft_inbus_buffer != HEADER_KEY_SYMBOL))
+		h_key_cnt <= '0;
+
+	header_locked <= (h_key_cnt == HEADER_KEY_SYMBOL_NUMBER);
+end
+
+assign header_recognized = header_locked;
+
+//=============================================================================
+//					Определение конечного спец. символа
+//=============================================================================
+
+always_ff @(posedge clk) begin
+
+	if(sample_enable)
+		t_key_cnt <= t_key_cnt + 1'b1;
+	if(trailer_locked | (ft_inbus_buffer != TRAILER_KEY_SYMBOL))
+		t_key_cnt <= '0;
+
+	trailer_locked <= (t_key_cnt == TRAILER_KEY_SYMBOL_NUMBER);
+end
+
+assign trailer_recognized = trailer_locked;  
+
+
+
+
+
+
+	
+	
+	
+	
+//=============================================================================
+//					Управление процессом обработки пакета
+//=============================================================================	
+always_ff @(posedge clk) begin	
+	sample_enable <= (rd_timing_cnt == RD_SAMPLE_TIME+1);
+
+	// Счетчик подсчитывает кол-во байт в пакете
+	if(rd_timing_cnt == RD_SAMPLE_TIME+2)
+		byte_number_cnt <= byte_number_cnt +1'b1;
+	if(~packet_is_in_progress)
+		byte_number_cnt <= '0;
+end
+
+assign packet_length_is_wrong = (byte_number_cnt > length_of_packet) ? '1 : '0;  
+
+SRFFE PACKET_PROGRESS(.clrn('1), .clk(clk), .en(1'b1), .s(Header_Locked), .r(trailer_locked | error), .q(packet_is_in_progress));
+assign Packet_Proc = packet_is_in_progress; 
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 endmodule: USB_RAM_Reg
