@@ -1,3 +1,13 @@
+/*
+длина пакета вклчает: длину пакета 2 байта + тип сервиса 2 байта + адрес и данные 0...n байт + конечный спец. символ 8 байт. Т.е. мин. длина пакета 12 байт
+
++------------------------+--------------+-------------+---------+----------+----+------------------------+
+|			12           |    2 байта   |    2 байта  | 2 байта | 2 байта  |    |       ?                |
+| начальный спец. символ | длина пакета | тип сервиса |  адрес  |  данные  |... |  конечный спец. символ |
++------------------------+--------------+-------------+---------+----------+----+------------------------+
+минимальная длина пакета 12 байт
+
+*/
 module USB_RAM_Reg
 (
 	input  clk,
@@ -59,14 +69,14 @@ logic [(BYTE_WIDTH-1):0]rd_timing_cnt = '0;
 logic [7:0]ft_inbus_buffer = '0;
 
 // Управление процессом обработки пакета
-logic sample_enable;
-logic packet_is_in_progress;
-logic [(WORD_WIDTH-1):0]byte_number_cnt;
+logic sample_enable;						// Сигнализирует о пришедшем байте
+logic packet_is_in_progress;				// Принимается пакет
+logic [(WORD_WIDTH-1):0]byte_number_cnt; 	// подсчитывает кол-во пришедших байт
 logic packet_length_is_wrong;
 // Определение начального спец. символа
-logic [3:0]h_key_cnt;
+logic [3:0]h_key_cnt=0;
 logic header_locked;
-logic header_recognized;	// спец символ зафиксирован
+logic header_recognized;					// спец символ зафиксирован
 // Определение конечного спец. символа
 logic [3:0]t_key_cnt;
 logic trailer_locked;
@@ -112,7 +122,12 @@ assign FT_RDn = ~rd_strobe;
 //=============================================================================
 //					Определение начального спец. символа
 //=============================================================================
-
+/*
+	Header считается зафиксированным в случе, 
+		если счетчик достчитает до HEADER_KEY_SYMBOL_NUMBER.
+	Считчик сбрасывается в 0, если в Header содержит хотя бы один
+		не спец. символ.
+*/
 always_ff @(posedge clk) begin
 
 	if(sample_enable)
@@ -128,7 +143,7 @@ assign header_recognized = header_locked;
 //=============================================================================
 //					Определение конечного спец. символа
 //=============================================================================
-
+/* Аналогично Header'y*/
 always_ff @(posedge clk) begin
 
 	if(sample_enable)
@@ -141,18 +156,14 @@ end
 
 assign trailer_recognized = trailer_locked;  
 
-
-
-
-
-
-	
-	
-	
-	
 //=============================================================================
 //					Управление процессом обработки пакета
 //=============================================================================	
+/*
+	byte_number_cnt подсчитывает кол-во пришедших байт.
+	Если подсчитанное кол-во байт превышает кол-во байт указанное а посылке,
+		то пакет считвется невалидным.
+*/
 always_ff @(posedge clk) begin	
 	sample_enable <= (rd_timing_cnt == RD_SAMPLE_TIME+1);
 
@@ -165,7 +176,7 @@ end
 
 assign packet_length_is_wrong = (byte_number_cnt > length_of_packet) ? '1 : '0;  
 
-SRFFE PACKET_PROGRESS(.clrn('1), .clk(clk), .en(1'b1), .s(Header_Locked), .r(trailer_locked | error), .q(packet_is_in_progress));
+SRFFE PACKET_PROGRESS(.clrn('1), .clk(clk), .en(1'b1), .s(header_locked), .r(trailer_locked | error), .q(packet_is_in_progress));
 assign Packet_Proc = packet_is_in_progress; 
 
 
