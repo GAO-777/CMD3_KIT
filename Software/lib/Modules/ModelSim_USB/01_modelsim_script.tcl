@@ -16,6 +16,7 @@ vlib work
 vlog -sv testbench.sv -work work
 vlog -sv ../USB_RAM_Reg.sv -work work
 vlog -sv D:/Cloud/GitHub/CMD3_electronics/Component/HDL/SystemVerilog/Primitives/SRFFE.sv -work work
+vlog -sv D:/Cloud/GitHub/CMD3_electronics/Component/HDL/SystemVerilog/Modules/Dual_Port_RAM.sv -work work
 
 
 # Запускаем симулятор 
@@ -29,7 +30,7 @@ vsim -t 1ns -c -voptargs="+acc" testbench
 do wave.do
 
 # Запускаем симуляцию на определеннре время
-run 450 ns 
+run 15000 ns 
 
 
 # Развернуть временную диаграмму сигналов
