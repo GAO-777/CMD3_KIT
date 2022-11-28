@@ -185,7 +185,7 @@ end
 
 assign 	start_read = rxf_edge; // | rd_to_go;
 
-SRFFE 			RD_Active_SRTrig
+SRFFE1 			RD_Active_SRTrig
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -195,7 +195,7 @@ SRFFE 			RD_Active_SRTrig
 	.q			(rd_cycle_is_active)
 );
 
-SRFFE 			RD_Strob_SRFF
+SRFFE1 			RD_Strob_SRFF
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -275,7 +275,7 @@ end
 
 assign packet_length_is_wrong = (byte_number_cnt > length_of_packet) ? '1 : '0;  
 
-SRFFE PACKET_PROGRESS
+SRFFE1 PACKET_PROGRESS
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -292,7 +292,7 @@ assign Packet_Proc = packet_is_in_progress;
 // - - - Флаг ошибки - - - //
 assign error	=   packet_length_is_wrong | length_is_wrong;
 
-SRFFE RECEIVE_ERROR
+SRFFE1 RECEIVE_ERROR
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -340,7 +340,7 @@ assign load_data = {load_data_h,load_data_l};
 //=============================================================================
 //				Запись принятых данных в память
 //=============================================================================	
-SRFFE 			RAM_FILLING_PROGRESS
+SRFFE1 			RAM_FILLING_PROGRESS
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -397,7 +397,7 @@ always_ff @(posedge clk)
 if(~wr_cycle_is_active)
 	wr_timing_counter <= '0;	
 
-SRFFE 			WR_Cycle_is_Active
+SRFFE1 			WR_Cycle_is_Active
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -407,7 +407,7 @@ SRFFE 			WR_Cycle_is_Active
 	.q			(wr_cycle_is_active)
 );
 
-SRFFE 			WR_STROBE
+SRFFE1 			WR_STROBE
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -417,7 +417,7 @@ SRFFE 			WR_STROBE
 	.q			(wr_strobe)
 );
 
-SRFFE 			WR_ZZZ
+SRFFE1 			WR_ZZZ
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -452,7 +452,7 @@ end
 
 assign byte_strobe = ((sample_enable_cnt >= WR_END_CYCLE_TIME+1) & ~ft_txen) ? 1'b1 : 1'b0;
 
-SRFFE 			COMMAND_LIST_HAS_CONTROL
+SRFFE1 			COMMAND_LIST_HAS_CONTROL
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -490,26 +490,26 @@ always_comb begin
 		
 		
 	// Отправляем кол-во байт посылки
-	if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER)
+	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER)
 		output_data = length_of_packet[7:0];
-	if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +1)
+	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +1)
 		output_data = length_of_packet[15:8];
 		
 		
 	// Отправляем тип сервиса
-	if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +2)
+	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +2)
 		if(receive_error)
 			output_data = ERROR_SYMBOL;
 		else
 			output_data = service_type[7:0]; 
-	if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +3)
+	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +3)
 		if(receive_error)
 			output_data = ERROR_SYMBOL;
 		else
 			output_data = service_type[15:8]; 
 	
 	// Отправляем данные
-	if( (out_buff_byte_number_cnt >= HEADER_KEY_SYMBOL_NUMBER +4) 
+	else if( (out_buff_byte_number_cnt >= HEADER_KEY_SYMBOL_NUMBER +4) 
 			& out_buff_byte_number_cnt <= (HEADER_KEY_SYMBOL_NUMBER + length_of_packet - TRAILER_KEY_SYMBOL_NUMBER))
 		if(usb_cmdl_ram_addr_cnt[0] == 0)
 			output_data = data_path[7:0]; 
@@ -518,9 +518,11 @@ always_comb begin
 	
 	
 	// Отправляем конечный спец. символ
-	if ( (out_buff_byte_number_cnt > HEADER_KEY_SYMBOL_NUMBER+length_of_packet-TRAILER_KEY_SYMBOL_NUMBER)
+	else if ( (out_buff_byte_number_cnt > HEADER_KEY_SYMBOL_NUMBER+length_of_packet-TRAILER_KEY_SYMBOL_NUMBER)
 			& (out_buff_byte_number_cnt <= HEADER_KEY_SYMBOL_NUMBER+length_of_packet))
 		output_data = TRAILER_KEY_SYMBOL; 
+    else
+        output_data = '0;
 end
 
 always_ff @(posedge clk) begin
@@ -533,7 +535,7 @@ end
 assign ram_addr_cnt_en = (out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER) ? 
 										1'b1 : 1'b0; 
 
-SRFFE 			USB_CMDL_RAM_ADDR_CNT_EN
+SRFFE1 			USB_CMDL_RAM_ADDR_CNT_EN
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -604,12 +606,14 @@ always_comb begin
 		
 	else
 		databusout_wire = usb_cmdl_ram_out;
+
+end
 		
-		
+always_comb begin		
 	if(receive_error) begin
 		case(service_type)
 			'hABCD : begin
-				directout_wire = '0;
+					directout_wire = '0;
 					if(usb_cmdl_ram_addr_cnt[1:0] <= 1) 
 						data_path = AddrBusOut;
 					else 
@@ -621,13 +625,21 @@ always_comb begin
 					data_path = AddrBusOut;
 					end
 				
-			'hCCCC : 		// loop back test повторяем отправленные данные
+			'hCCCC : begin 		// loop back test повторяем отправленные данные
 					directout_wire = '0;
+                    data_path = '0;
+                    end
 					
-			default:
+			default: begin
 					directout_wire = '0;
+                    data_path = '0;
+                    end
 		endcase
 	end
+	else begin
+		directout_wire = '0;
+        data_path = '0;
+        end
 	
 end
 
@@ -641,7 +653,7 @@ always_ff @(posedge clk)
 									& (usb_cmdl_ram_addr_cnt[1:0] == 0) & receive_error); 
 
 	
-	SRFFE 		dfdf
+	SRFFE1 		dfdf
 (
 	.clrn		('1), 
 	.clk		(clk), 
