@@ -22,7 +22,7 @@ module USB_RAM_Reg
 	input  [7:0]FT_DATA_In,		
 	output [7:0]FT_DATA_Out,	
 
-	output FT_ZZ,
+	output logic FT_ZZ,
 	output USB_Active,
 	output Header_recognized,
 	output Trailer_recognized,
@@ -37,10 +37,10 @@ module USB_RAM_Reg
 	input  [15:0]DataBus_In,
 	output [15:0]DataBusOut,
 	input  DataBusStrobe, 
-	output Error,
+	output logic Error,
 
 	// Master Mode Signals 
-	output AccessRequest,
+	output  logic AccessRequest = '0,
 	input AccessGranted,
 	output DirectOut,
 	output [15:0]AddrBusOut,
@@ -86,23 +86,22 @@ parameter NUM_WORDS_RAM	= 2048;
 //=============================================================================
 //					Nets
 //=============================================================================
-logic error;
 
 // Процедура чтения одного слова
-logic rxf_edge;
-logic [2:0]rxf_delay;
+logic rxf_edge = '0;
+logic [2:0]rxf_delay = '0;
 logic start_read;	
 logic rd_cycle_is_active; 
-logic rd_strobe;
+logic rd_strobe = '0;
 logic [(BYTE_WIDTH-1):0]rd_timing_cnt = '0;
 logic [7:0]ft_inbus_buffer = '0;
 
 // Управление процессом обработки пакета
 logic sample_enable;						// Сигнализирует о пришедшем байте
-logic packet_is_in_progress;				// Принимается пакет
-logic [(WORD_WIDTH-1):0]byte_number_cnt; 	// подсчитывает кол-во пришедших байт
+logic packet_is_in_progress ='0;				// Принимается пакет
+logic [(WORD_WIDTH-1):0]byte_number_cnt = '0; 	// подсчитывает кол-во пришедших байт
 logic packet_length_is_wrong;
-logic receive_error;						// Ошибка при приеме посылки
+logic received_packet_is_valid; 						// Ошибка при приеме посылки
 // Определение начального спец. символа
 logic [3:0]h_key_cnt=0;
 logic header_locked;
@@ -124,7 +123,7 @@ logic [(BYTE_WIDTH-1):0]load_data_l;
 logic [(BYTE_WIDTH-1):0]load_data_h;
 logic [(WORD_WIDTH-1):0]load_data;
 // Запись принятых данных в память
-logic ram_filling_is_in_progress;
+logic ram_filling_is_in_progress = '0;
 logic ram_filling;
 logic ram_from_usb_we;
 
@@ -138,28 +137,29 @@ logic [(WORD_WIDTH-1):0]usb_cmdl_ram_out;
 logic [7:0]ft_outbus_buffer;
 logic [7:0]output_buffer;
 logic [7:0]output_data;
-logic wr_cycle_is_active;
-logic [(BYTE_WIDTH-1):0]wr_timing_counter;
-logic wr_strobe;
+logic wr_cycle_is_active = '0;
+logic [(BYTE_WIDTH-1):0]wr_timing_counter = '0;
+logic wr_strobe = '0;
 
 // Отправка данных в FT_FIFO
 logic rd_paket_end_edge;
 logic [2:0]packet_prog_delay;
-logic [4:0]sample_enable_cnt;
+logic [4:0]sample_enable_cnt = '0;
 logic ft_txen;
-logic [(WORD_WIDTH-1):0]out_buff_byte_number_cnt;
-logic command_list_has_control;
+logic [(WORD_WIDTH-1):0]out_buff_byte_number_cnt = '0;
+logic command_list_has_control = '0;
+logic byte_strobe;
 
 // Отправка ответной посылки
 logic command_list_end_control;
-logic [(WORD_WIDTH-1):0]usb_cmdl_ram_addr_cnt;
+logic [(WORD_WIDTH-1):0]usb_cmdl_ram_addr_cnt = '0;
 logic ram_addr_cnt_en;
-logic usb_cmdl_ram_addr_cnt_en;
+logic usb_cmdl_ram_addr_cnt_en = '0;
 
 // Управление шиной данных 
 logic wr_to_go;
 logic rd_to_go;
-logic condition_access_request;
+logic condition_access_request = '0;
 logic [(WORD_WIDTH-1):0]data_path;
 logic [(WORD_WIDTH-1):0]databusout_wire;
 logic directout_wire;
@@ -185,31 +185,37 @@ end
 
 assign 	start_read = rxf_edge; // | rd_to_go;
 
-SRFFE 			RD_Active_SRTrig
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(start_read), 
-	.r			(rd_timing_cnt == RD_END_CYCLE_TIME), 
-	.q			(rd_cycle_is_active)
-);
 
-SRFFE 			RD_Strob_SRFF
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(rd_timing_cnt == RD_STROBE_START_TIME), 
-	.r			(rd_timing_cnt == RD_STROBE_STOP_TIME), 
-	.q			(rd_strobe)
-);
+// RD_CYCLE_IS_ACTIVE
+always_ff @(posedge clk) begin
+	if(start_read)
+		rd_cycle_is_active <= 1'b1;
+	if(rd_timing_cnt == RD_END_CYCLE_TIME)
+		rd_cycle_is_active <= 1'b0;
+end
+
+// RD_CYCLE_IS_ACTIVE
+always_ff @(posedge clk) begin
+	if(start_read)
+		rd_cycle_is_active <= 1'b1;
+	if(rd_timing_cnt == RD_END_CYCLE_TIME)
+		rd_cycle_is_active <= 1'b0;
+end
+
+
+// RD_Strobe
+always_ff @(posedge clk) begin
+	if(rd_timing_cnt == RD_STROBE_START_TIME)
+		rd_strobe <= 1'b1;
+	if(rd_timing_cnt == RD_STROBE_STOP_TIME)
+		rd_strobe <= 1'b0;
+end
 
 always_ff @(posedge clk) begin
-	if(~rd_cycle_is_active)
-		rd_timing_cnt <= '0;
-	else
+	if(rd_cycle_is_active)
 		rd_timing_cnt <= rd_timing_cnt + 1'b1;
+	else
+		rd_timing_cnt <= '0;
 	
 	if(rd_timing_cnt == RD_SAMPLE_TIME)
 		ft_inbus_buffer	<= FT_DATA_In;
@@ -275,33 +281,28 @@ end
 
 assign packet_length_is_wrong = (byte_number_cnt > length_of_packet) ? '1 : '0;  
 
-SRFFE PACKET_PROGRESS
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(header_locked), 
-	.r			(trailer_locked | error), 
-	.q			(packet_is_in_progress)
-);
+// PACKET_IS_IN_PROGRESS
+always_ff @(posedge clk) begin
+	if(header_locked)
+		packet_is_in_progress <= 1'b1;
+	if(trailer_locked | Error)
+		packet_is_in_progress <= 1'b0;
+end
 
 assign Packet_Proc = packet_is_in_progress; 
 
 
 
 // - - - Флаг ошибки - - - //
-assign error	=   packet_length_is_wrong | length_is_wrong;
-
-SRFFE RECEIVE_ERROR
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(header_locked), 
-	.r			(error), 
-	.q			(receive_error)
-);		
-
+assign Error	=   packet_length_is_wrong | length_is_wrong;
+	
+// RECEIVED_PACKET_IS_VALID
+always_ff @(posedge clk) begin
+	if(header_locked)
+		received_packet_is_valid <= 1'b1;
+	if(Error)
+		received_packet_is_valid <= 1'b0;
+end
 //=============================================================================
 //				Процесс заполнения контрольных регистров
 //=============================================================================	
@@ -340,15 +341,14 @@ assign load_data = {load_data_h,load_data_l};
 //=============================================================================
 //				Запись принятых данных в память
 //=============================================================================	
-SRFFE 			RAM_FILLING_PROGRESS
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(sample_enable & (byte_number_cnt==0)), 
-	.r			(byte_number_cnt == length_of_packet), 
-	.q			(ram_filling_is_in_progress)
-);
+
+// RAM_FILLING_IS_IN_PROGRESS
+always_ff @(posedge clk) begin
+	if(sample_enable & (byte_number_cnt==0))
+		ram_filling_is_in_progress <= 1'b1;
+	if(byte_number_cnt == length_of_packet)
+		ram_filling_is_in_progress <= 1'b0;
+end
 
 assign ram_filling = ram_filling_is_in_progress;
 
@@ -401,35 +401,29 @@ always_ff @(posedge clk) begin
 		wr_timing_counter <= '0;	
 end
 
-SRFFE 			WR_Cycle_is_Active
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(byte_strobe /*| WR_to_Go*/), 
-	.r			(wr_timing_counter == WR_END_CYCLE_TIME), 
-	.q			(wr_cycle_is_active)
-);
+// WR_CYCLE_IS_ACTIVE
+always_ff @(posedge clk) begin
+	if(byte_strobe | wr_to_go)
+		wr_cycle_is_active <= 1'b1;
+	if(wr_timing_counter == WR_END_CYCLE_TIME)
+		wr_cycle_is_active <= 1'b0;
+end
 
-SRFFE 			WR_STROBE
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(wr_timing_counter == RD_STROBE_START_TIME),
-	.r			(wr_timing_counter == RD_STROBE_STOP_TIME), 
-	.q			(wr_strobe)
-);
+// WR_STROBE
+always_ff @(posedge clk) begin
+	if(wr_timing_counter == RD_STROBE_START_TIME)
+		wr_strobe <= 1'b1;
+	if(wr_timing_counter == RD_STROBE_STOP_TIME)
+		wr_strobe <= 1'b0;
+end
 
-SRFFE 			WR_ZZZ
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(wr_timing_counter == WR_ZZZ_Start_Time),
-	.r			(wr_timing_counter == WR_ZZZ_Stop_Time), 
-	.q			(FT_ZZ)
-);
+// WR_ZZZ
+always_ff @(posedge clk) begin
+	if(wr_timing_counter == WR_ZZZ_START_TIME)
+		FT_ZZ <= 1'b1;
+	if(wr_timing_counter == WR_ZZZ_STOP_TIME)
+		FT_ZZ <= 1'b0;
+end
 
 assign FT_DATA_Out = ft_outbus_buffer;
 //assign FT_WR = (DEVICE == "FT245R") ?  wr_strobe : ~wr_strobe;  
@@ -456,15 +450,13 @@ end
 
 assign byte_strobe = ((sample_enable_cnt >= WR_END_CYCLE_TIME+1) & ~ft_txen) ? 1'b1 : 1'b0;
 
-SRFFE 			COMMAND_LIST_HAS_CONTROL
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(rd_paket_end_edge),
-	.r			(command_list_end_control), 
-	.q			(command_list_has_control)
-);
+// COMMAND_LIST_HAS_CONTROL
+always_ff @(posedge clk) begin
+	if(rd_paket_end_edge)
+		command_list_has_control <= 1'b1;
+	if(command_list_end_control)
+		command_list_has_control <= 1'b0;
+end
 
 always_ff @(posedge clk) begin
 	if(byte_strobe)
@@ -502,12 +494,12 @@ always_comb begin
 		
 	// Отправляем тип сервиса
 	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +2)
-		if(receive_error)
+		if(~received_packet_is_valid)
 			output_data = ERROR_SYMBOL;
 		else
 			output_data = service_type[7:0]; 
 	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +3)
-		if(receive_error)
+		if(~received_packet_is_valid)
 			output_data = ERROR_SYMBOL;
 		else
 			output_data = service_type[15:8]; 
@@ -539,15 +531,13 @@ end
 assign ram_addr_cnt_en = (out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER) ? 
 										1'b1 : 1'b0; 
 
-SRFFE 			USB_CMDL_RAM_ADDR_CNT_EN
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(ram_addr_cnt_en),
-	.r			(command_list_end_control), 
-	.q			(usb_cmdl_ram_addr_cnt_en)
-);
+// USB_CMDL_RAM_ADDR_CNT_EN
+always_ff @(posedge clk) begin
+	if(ram_addr_cnt_en)
+		usb_cmdl_ram_addr_cnt_en <= 1'b1;
+	if(command_list_end_control)
+		usb_cmdl_ram_addr_cnt_en <= 1'b0;
+end
 
 assign command_list_end_control = (out_buff_byte_number_cnt >= HEADER_KEY_SYMBOL_NUMBER+length_of_packet) ?
 									1'b1 : 1'b0;  
@@ -614,7 +604,7 @@ always_comb begin
 end
 		
 always_comb begin		
-	if(receive_error) begin
+	if(received_packet_is_valid) begin
 		case(service_type)
 			'hABCD : begin
 					directout_wire = '0;
@@ -654,18 +644,15 @@ assign DirectOut = directout_wire;
 always_ff @(posedge clk)
 	condition_access_request <= ( byte_strobe & ((usb_cmdl_ram_addr_cnt >= 4) 
 									& (usb_cmdl_ram_addr_cnt <= length_of_packet-TRAILER_KEY_SYMBOL_NUMBER))
-									& (usb_cmdl_ram_addr_cnt[1:0] == 0) & receive_error); 
+									& (usb_cmdl_ram_addr_cnt[1:0] == 0) & received_packet_is_valid); 
 
 	
-	SRFFE 		dfdf
-(
-	.clrn		('1), 
-	.clk		(clk), 
-	.en			(1'b1), 
-	.s			(condition_access_request),
-	.r			(DataBusStrobe & AccessGranted), 
-	.q			(AccessRequest)
-);	
-
+// ACCESS_REQUEST
+always_ff @(posedge clk) begin
+	if(condition_access_request)
+		AccessRequest <= 1'b1;
+	if(DataBusStrobe & AccessGranted)
+		AccessRequest <= 1'b0;
+end
  
 endmodule: USB_RAM_Reg

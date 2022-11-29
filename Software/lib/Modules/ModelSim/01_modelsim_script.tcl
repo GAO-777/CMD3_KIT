@@ -18,6 +18,7 @@ vlog -sv ../Skeleton_package.sv -work work
 vlog -sv ../CMD3_skeleton_project.sv -work work
 vlog -sv ../Arbiter1.sv -work work
 vlog -sv D:/Cloud/GitHub/CMD3_electronics/Component/HDL/SystemVerilog/Modules/Dual_Port_RAM.sv -work work
+vlog -sv ../USB_RAM_Reg.sv -work work
 
 # Запускаем симулятор 
 #vsim -c -voptargs="+acc" -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/altera_mf -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/cyclonev -L D:/Program_Files/Quartus18/modelsim_ase/altera/verilog/220model work.testbench 
@@ -30,7 +31,7 @@ vsim -t 1ns -c -voptargs="+acc" testbench
 do wave.do
 
 # Запускаем симуляцию на определеннре время
-run 450 ns 
+run 25000 ns 
 
 
 # Развернуть временную диаграмму сигналов

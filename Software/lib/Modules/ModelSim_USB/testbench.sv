@@ -55,10 +55,10 @@ bit [(HEADER_KEY_SYMBOL_NUMBER-1):0][7:0]header = '{HEADER_KEY_SYMBOL_NUMBER{HEA
 bit [(TRAILER_KEY_SYMBOL_NUMBER-1):0][7:0]trailer = '{TRAILER_KEY_SYMBOL_NUMBER{TRAILER_KEY_SYMBOL}};
 
 bit [7:0][7:0]ft_fifo = '{
-							8'h0 ,	
-							8'hFF,	
-							8'h0,	
-							8'h1,	
+							8'h56 ,	
+							8'h34,	
+							8'hF0,	
+							8'h0F,	
 							8'hAB,	
 							8'hCD,	
 							8'h0,	
@@ -72,12 +72,18 @@ bit ft_rxfn;
 bit stop = 0;
 bit send_package;  
 bit [1:0]ft_rxfn_delay;
-
-initial
+bit start=1;
+initial begin
 #10442	stop=1;
+end
+
+initial begin
+#200	start=1;
+end
 
 always begin 
-#180  ft_rxfn = !ft_rxfn; 
+ #180  ft_rxfn = ~ft_rxfn | ~start; 
+
 end
   
 always_ff @(negedge FT_RXFn) begin
@@ -109,10 +115,12 @@ always_ff @(clk100) begin
 
 	if(~ft_rxfn_delay[0] & ft_rxfn_delay[1]) begin
 		FT_RXFn <= 1'b0 | stop;
+		FT_TXEn <= '0; 
 		end
 
 	if(ft_rdn_edge)
 		FT_RXFn <= '1;
+	
 	if(ft_wr_edge)
 		FT_TXEn <= '1; 
 end
@@ -154,7 +162,7 @@ USB_RAM_Reg USB_RAM_Reg_inst
 	.FT_RDn					(FT_RDn),							
 	.FT_WR					(FT_WR),				
 	.FT_DATA_In				(FT_DATA_Out),		
-	.FT_DATA_Out			(),	
+	.FT_DATA_Out			(FT_DATA_In),	
 	.FT_ZZ					(),
 	.USB_Active				(),
 	.Header_recognized		(),

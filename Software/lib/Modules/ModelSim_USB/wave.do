@@ -8,7 +8,7 @@ add wave -noupdate -expand -group testbench /testbench/FT_TXEn
 add wave -noupdate -expand -group testbench /testbench/FT_RXFn
 add wave -noupdate -expand -group testbench /testbench/FT_RDn
 add wave -noupdate -expand -group testbench /testbench/FT_WR
-add wave -noupdate -expand -group testbench /testbench/FT_DATA_In
+add wave -noupdate -expand -group testbench -radix hexadecimal /testbench/FT_DATA_In
 add wave -noupdate -expand -group testbench -radix hexadecimal /testbench/FT_DATA_Out
 add wave -noupdate -expand -group FT_Module /testbench/FT_USB_inst/ft_rxfn
 add wave -noupdate -expand -group FT_Module -radix hexadecimal /testbench/FT_USB_inst/FT_DATA_out
@@ -42,6 +42,7 @@ add wave -noupdate -expand -group {Control Reg} -radix hexadecimal /testbench/US
 add wave -noupdate -expand -group {Write data to RAM} /testbench/USB_RAM_Reg_inst/ram_filling_is_in_progress
 add wave -noupdate -expand -group {Write data to RAM} /testbench/USB_RAM_Reg_inst/ram_filling
 add wave -noupdate -expand -group {Write data to RAM} /testbench/USB_RAM_Reg_inst/ram_from_usb_we
+add wave -noupdate -expand -group {Write data to RAM} /testbench/USB_RAM_Reg_inst/USB_CMDL_RAM/ram
 add wave -noupdate -expand -group {RAM & CL} /testbench/USB_RAM_Reg_inst/addr_page_offset
 add wave -noupdate -expand -group {RAM & CL} /testbench/USB_RAM_Reg_inst/data_page_offset
 add wave -noupdate -expand -group {RAM & CL} /testbench/USB_RAM_Reg_inst/fast_module_buffer
@@ -52,6 +53,17 @@ add wave -noupdate -expand -group {Single word write} -radix unsigned /testbench
 add wave -noupdate -expand -group {Single word write} /testbench/USB_RAM_Reg_inst/wr_cycle_is_active
 add wave -noupdate -expand -group {Single word write} /testbench/USB_RAM_Reg_inst/wr_timing_counter
 add wave -noupdate -expand -group {Single word write} /testbench/USB_RAM_Reg_inst/wr_strobe
+add wave -noupdate -expand -group Send /testbench/USB_RAM_Reg_inst/command_list_end_control
+add wave -noupdate -expand -group Send /testbench/USB_RAM_Reg_inst/usb_cmdl_ram_addr_cnt
+add wave -noupdate -expand -group Send /testbench/USB_RAM_Reg_inst/ram_addr_cnt_en
+add wave -noupdate -expand -group Send /testbench/USB_RAM_Reg_inst/usb_cmdl_ram_addr_cnt_en
+add wave -noupdate /testbench/USB_RAM_Reg_inst/rd_paket_end_edge
+add wave -noupdate /testbench/USB_RAM_Reg_inst/packet_prog_delay
+add wave -noupdate /testbench/USB_RAM_Reg_inst/sample_enable_cnt
+add wave -noupdate /testbench/USB_RAM_Reg_inst/ft_txen
+add wave -noupdate /testbench/USB_RAM_Reg_inst/out_buff_byte_number_cnt
+add wave -noupdate /testbench/USB_RAM_Reg_inst/command_list_has_control
+add wave -noupdate /testbench/USB_RAM_Reg_inst/byte_strobe
 add wave -noupdate /testbench/USB_RAM_Reg_inst/packet_prog_delay
 add wave -noupdate /testbench/USB_RAM_Reg_inst/rd_paket_end_edge
 add wave -noupdate /testbench/USB_RAM_Reg_inst/error
@@ -68,7 +80,7 @@ add wave -noupdate /testbench/USB_RAM_Reg_inst/Select
 add wave -noupdate /testbench/USB_RAM_Reg_inst/Direct_In
 add wave -noupdate /testbench/USB_RAM_Reg_inst/AddrBus_In
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 4} {9911 ns} 0} {{Cursor 2} {5915 ns} 0}
+WaveRestoreCursors {{Cursor 4} {10571 ns} 0} {{Cursor 2} {5915 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 329
 configure wave -valuecolwidth 100
