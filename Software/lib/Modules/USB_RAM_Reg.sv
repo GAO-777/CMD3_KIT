@@ -185,7 +185,7 @@ end
 
 assign 	start_read = rxf_edge; // | rd_to_go;
 
-SRFFE1 			RD_Active_SRTrig
+SRFFE 			RD_Active_SRTrig
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -195,7 +195,7 @@ SRFFE1 			RD_Active_SRTrig
 	.q			(rd_cycle_is_active)
 );
 
-SRFFE1 			RD_Strob_SRFF
+SRFFE 			RD_Strob_SRFF
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -275,7 +275,7 @@ end
 
 assign packet_length_is_wrong = (byte_number_cnt > length_of_packet) ? '1 : '0;  
 
-SRFFE1 PACKET_PROGRESS
+SRFFE PACKET_PROGRESS
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -292,7 +292,7 @@ assign Packet_Proc = packet_is_in_progress;
 // - - - Флаг ошибки - - - //
 assign error	=   packet_length_is_wrong | length_is_wrong;
 
-SRFFE1 RECEIVE_ERROR
+SRFFE RECEIVE_ERROR
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -340,7 +340,7 @@ assign load_data = {load_data_h,load_data_l};
 //=============================================================================
 //				Запись принятых данных в память
 //=============================================================================	
-SRFFE1 			RAM_FILLING_PROGRESS
+SRFFE 			RAM_FILLING_PROGRESS
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -393,11 +393,15 @@ if(DataBusStrobe & AccessGranted)
 //=============================================================================
 //				Процедура записи одного слова
 //=============================================================================
-always_ff @(posedge clk)
-if(~wr_cycle_is_active)
-	wr_timing_counter <= '0;	
+always_ff @(posedge clk) begin
+	
+	wr_timing_counter <= wr_timing_counter + 1'b1;
+	
+	if(~wr_cycle_is_active)
+		wr_timing_counter <= '0;	
+end
 
-SRFFE1 			WR_Cycle_is_Active
+SRFFE 			WR_Cycle_is_Active
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -407,7 +411,7 @@ SRFFE1 			WR_Cycle_is_Active
 	.q			(wr_cycle_is_active)
 );
 
-SRFFE1 			WR_STROBE
+SRFFE 			WR_STROBE
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -417,7 +421,7 @@ SRFFE1 			WR_STROBE
 	.q			(wr_strobe)
 );
 
-SRFFE1 			WR_ZZZ
+SRFFE 			WR_ZZZ
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -452,7 +456,7 @@ end
 
 assign byte_strobe = ((sample_enable_cnt >= WR_END_CYCLE_TIME+1) & ~ft_txen) ? 1'b1 : 1'b0;
 
-SRFFE1 			COMMAND_LIST_HAS_CONTROL
+SRFFE 			COMMAND_LIST_HAS_CONTROL
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -535,7 +539,7 @@ end
 assign ram_addr_cnt_en = (out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER) ? 
 										1'b1 : 1'b0; 
 
-SRFFE1 			USB_CMDL_RAM_ADDR_CNT_EN
+SRFFE 			USB_CMDL_RAM_ADDR_CNT_EN
 (
 	.clrn		('1), 
 	.clk		(clk), 
@@ -653,7 +657,7 @@ always_ff @(posedge clk)
 									& (usb_cmdl_ram_addr_cnt[1:0] == 0) & receive_error); 
 
 	
-	SRFFE1 		dfdf
+	SRFFE 		dfdf
 (
 	.clrn		('1), 
 	.clk		(clk), 
