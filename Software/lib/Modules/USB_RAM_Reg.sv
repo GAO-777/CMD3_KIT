@@ -24,8 +24,8 @@ module USB_RAM_Reg
 
 	output logic FT_ZZ,
 	output USB_Active,
-	output Header_recognized,
-	output Trailer_recognized,
+	output logic Header_recognized,
+	output logic Trailer_recognized,
 
 	output Packet_Proc,
 	output RAM_WE,
@@ -52,10 +52,10 @@ module USB_RAM_Reg
 );
 
 // FT245R timing
-parameter RD_END_CYCLE_TIME 	= 	25; //+2clocks in begig and 1clk at end on resynchro
-parameter RD_SAMPLE_TIME		=	9; 
-parameter RD_STROBE_START_TIME	=	2; 
-parameter RD_STROBE_STOP_TIME	=	12; 
+localparam RD_END_CYCLE_TIME 	= 	25; //+2clocks in begig and 1clk at end on resynchro
+localparam RD_SAMPLE_TIME		=	9; 
+localparam RD_STROBE_START_TIME	=	2; 
+localparam RD_STROBE_STOP_TIME	=	12; 
 
 /*
 // FT23H timing, FS mode
@@ -66,22 +66,22 @@ parameter RD_STROBE_STOP_TIME	=	5;
 */
 
 
-parameter WR_END_CYCLE_TIME		=	25; 
-parameter WR_STROBE_START_TIME	=	5; 
-parameter WR_STROBE_STOP_TIME	=	15; 
-parameter WR_ZZZ_START_TIME		=	2; 
-parameter WR_ZZZ_STOP_TIME		=	22; 
+localparam WR_END_CYCLE_TIME		=	25; 
+localparam WR_STROBE_START_TIME	=	5; 
+localparam WR_STROBE_STOP_TIME	=	15; 
+localparam WR_ZZZ_START_TIME		=	2; 
+localparam WR_ZZZ_STOP_TIME		=	22; 
 
-parameter BYTE_WIDTH			=	8; 
-parameter WORD_WIDTH			=	16; 
+localparam BYTE_WIDTH			=	8; 
+localparam WORD_WIDTH			=	16; 
 
-parameter [(BYTE_WIDTH-1):0]HEADER_KEY_SYMBOL 	=	85;
-parameter HEADER_KEY_SYMBOL_NUMBER			  	=	12;
-parameter [(BYTE_WIDTH-1):0]TRAILER_KEY_SYMBOL	=	170;
-parameter TRAILER_KEY_SYMBOL_NUMBER				=	8;
-parameter [(BYTE_WIDTH-1):0]ERROR_SYMBOL        =   'hEE; 
+localparam [(BYTE_WIDTH-1):0]HEADER_KEY_SYMBOL 	=	85;
+localparam HEADER_KEY_SYMBOL_NUMBER			  	=	12;
+localparam [(BYTE_WIDTH-1):0]TRAILER_KEY_SYMBOL	=	170;
+localparam TRAILER_KEY_SYMBOL_NUMBER				=	8;
+localparam [(BYTE_WIDTH-1):0]ERROR_SYMBOL        =   'hEE; 
 
-parameter NUM_WORDS_RAM	= 2048; 
+localparam NUM_WORDS_RAM	= 2048; 
 
 //=============================================================================
 //					Nets
@@ -105,11 +105,9 @@ logic received_packet_is_valid; 						// Ошибка при приеме пос
 // Определение начального спец. символа
 logic [3:0]h_key_cnt=0;
 logic header_locked;
-logic header_recognized;					// спец символ зафиксирован
 // Определение конечного спец. символа
 logic [3:0]t_key_cnt;
 logic trailer_locked;
-logic trailer_recognized;
 
 // Процесс заполнения контрольных регистров
 logic [(BYTE_WIDTH-1):0]length_of_packet_l; 
@@ -185,7 +183,6 @@ end
 
 assign 	start_read = rxf_edge; // | rd_to_go;
 
-
 // RD_CYCLE_IS_ACTIVE
 always_ff @(posedge clk) begin
 	if(start_read)
@@ -193,15 +190,6 @@ always_ff @(posedge clk) begin
 	if(rd_timing_cnt == RD_END_CYCLE_TIME)
 		rd_cycle_is_active <= 1'b0;
 end
-
-// RD_CYCLE_IS_ACTIVE
-always_ff @(posedge clk) begin
-	if(start_read)
-		rd_cycle_is_active <= 1'b1;
-	if(rd_timing_cnt == RD_END_CYCLE_TIME)
-		rd_cycle_is_active <= 1'b0;
-end
-
 
 // RD_Strobe
 always_ff @(posedge clk) begin
@@ -243,7 +231,7 @@ always_ff @(posedge clk) begin
 	header_locked <= (h_key_cnt == HEADER_KEY_SYMBOL_NUMBER);
 end
 
-assign header_recognized = header_locked;
+assign Header_recognized = header_locked;
 
 //=============================================================================
 //					Определение конечного спец. символа
@@ -259,7 +247,7 @@ always_ff @(posedge clk) begin
 	trailer_locked <= (t_key_cnt == TRAILER_KEY_SYMBOL_NUMBER);
 end
 
-assign trailer_recognized = trailer_locked;  
+assign Trailer_recognized = trailer_locked;  
 
 //=============================================================================
 //					Управление процессом обработки пакета
@@ -270,7 +258,7 @@ assign trailer_recognized = trailer_locked;
 		то пакет считвется невалидным.
 */
 always_ff @(posedge clk) begin	
-	sample_enable <= (rd_timing_cnt == RD_SAMPLE_TIME+1);
+	sample_enable <= (rd_timing_cnt == RD_SAMPLE_TIME+1'b1);
 
 	// Счетчик подсчитывает кол-во байт в пакете
 	if(rd_timing_cnt == RD_SAMPLE_TIME+2)
@@ -309,9 +297,9 @@ end
 
 // - - - Кол-во байт в пакете - - - //	
 always_ff @(posedge clk) begin
-if(sample_enable & (byte_number_cnt==0) & packet_is_in_progress)
+if(sample_enable & (byte_number_cnt==16'b0) & packet_is_in_progress)
 	length_of_packet_l <= ft_inbus_buffer;  
-if(sample_enable & (byte_number_cnt==1) & packet_is_in_progress)
+if(sample_enable & (byte_number_cnt==16'b1) & packet_is_in_progress)
 	length_of_packet_h <= ft_inbus_buffer;  
 end
 
@@ -378,12 +366,12 @@ Dual_Port_RAM
 	// port B
 	.addr_b			(Select ? {2'b0,AddrBus_In} : data_page_offset),
 	.data_b			(DataBus_In),
-	.wren_b			(Select & Direct_In & DataBusStrobe &  AddrBus_In[8]), // ЗАЧЕМ AddrBus_In[8]???????? 
+	.wren_b			(Select & Direct_In & DataBusStrobe &  AddrBus_In[8]),
 	.q_b			(usb_cmdl_ram_out)
 );
 
-assign addr_page_offset = (usb_cmdl_ram_addr_cnt[11:1] + 'd1); 
-assign data_page_offset = (usb_cmdl_ram_addr_cnt[11:1] + 'd2); 
+assign addr_page_offset = (usb_cmdl_ram_addr_cnt[11:1] + 2'd1); 
+assign data_page_offset = (usb_cmdl_ram_addr_cnt[11:1] + 2'd2); 
 
 always_ff @(posedge clk) 
 if(DataBusStrobe & AccessGranted)
@@ -448,7 +436,7 @@ always_ff @(posedge clk) begin
 	ft_txen <= FT_TXEn;
 end
 
-assign byte_strobe = ((sample_enable_cnt >= WR_END_CYCLE_TIME+1) & ~ft_txen) ? 1'b1 : 1'b0;
+assign byte_strobe = ((sample_enable_cnt >= WR_END_CYCLE_TIME+1'b1) & ~ft_txen) ? 1'b1 : 1'b0;
 
 // COMMAND_LIST_HAS_CONTROL
 always_ff @(posedge clk) begin
@@ -488,7 +476,7 @@ always_comb begin
 	// Отправляем кол-во байт посылки
 	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER)
 		output_data = length_of_packet[7:0];
-	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +1)
+	else if(out_buff_byte_number_cnt == HEADER_KEY_SYMBOL_NUMBER +1'b1)
 		output_data = length_of_packet[15:8];
 		
 		
@@ -547,7 +535,10 @@ assign command_list_end_control = (out_buff_byte_number_cnt >= HEADER_KEY_SYMBOL
 //=============================================================================
 
 always_comb begin
-
+	databusout_wire = '0; 
+	wr_to_go   = '0; 
+	rd_to_go   = '0; 
+	
 	if(~AddrBus_In[8] & (Select == 1'b1))	// модуль работает в режиме Slave 
 		case(AddrBus_In[7:0])
 			0 : databusout_wire = service_type;
@@ -607,7 +598,7 @@ always_comb begin
 	if(received_packet_is_valid) begin
 		case(service_type)
 			'hABCD : begin
-					directout_wire = '0;
+					directout_wire = 1'b0;
 					if(usb_cmdl_ram_addr_cnt[1:0] <= 1) 
 						data_path = AddrBusOut;
 					else 

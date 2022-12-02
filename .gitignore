@@ -2,13 +2,58 @@ History/
 __Previews/
 PCB/Project Logs for CMD3_KIT/
 Project Outputs for CMD3_KIT/
-db/
-incremental_db/
-output_files/
+
 Software/Quartus_exp/output_files/
 work/
-*.wlf
-*.bak
+
 Software/lib/Modules/ModelSim/work/
 **/transcript
 *.qws
+
+
+# Временно исключаю
+Software/Imitator
+Software/Trion_test
+
+# ignore Quartus II generated folders
+*/db/
+*/incremental_db/
+*/simulation/
+*/timing/
+*/output_files/
+*/testbench/
+*/*_sim/
+incremental_db/
+db/
+_output_files/
+
+# ignore Quartus II generated files
+*_generation_script*
+*_inst.vhd
+*.bak
+*.cmp
+*.done
+*.eqn
+*.hex
+*.html
+*.jdi
+*.jpg
+# *.mif
+*.pin
+*.pof
+*.ptf.*
+*.qar
+*.qarlog
+*.qws
+*.rpt
+*.smsg
+*.sof
+*.sopc_builder
+*.summary
+*.tcl
+*.txt # Explicitly add any text files used
+*~
+*example*
+*sopc_*
+*wlf*
+PLLJ_PLLSPE_INFO.txt

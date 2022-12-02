@@ -54,7 +54,11 @@ parameter [7:0]ERROR_SYMBOL        	=   'hEE;
 bit [(HEADER_KEY_SYMBOL_NUMBER-1):0][7:0]header = '{HEADER_KEY_SYMBOL_NUMBER{HEADER_KEY_SYMBOL}};
 bit [(TRAILER_KEY_SYMBOL_NUMBER-1):0][7:0]trailer = '{TRAILER_KEY_SYMBOL_NUMBER{TRAILER_KEY_SYMBOL}};
 
-bit [7:0][7:0]ft_fifo = '{
+bit [11:0][7:0]ft_fifo = '{
+							8'h12 ,	
+							8'h11,	
+							8'h10,	
+							8'h09,
 							8'h56 ,	
 							8'h34,	
 							8'hF0,	
@@ -62,10 +66,10 @@ bit [7:0][7:0]ft_fifo = '{
 							8'hAB,	
 							8'hCD,	
 							8'h0,	
-							8'h10
+							8'h14
 						  };
 
-bit [27:0][7:0]usb_package = {trailer,ft_fifo,header};
+bit [31:0][7:0]usb_package = {trailer,ft_fifo,header};
 
 int byte_index = 0;
 bit ft_rxfn;
@@ -74,7 +78,7 @@ bit send_package;
 bit [1:0]ft_rxfn_delay;
 bit start=1;
 initial begin
-#10442	stop=1;
+#11882	stop=1;
 end
 
 initial begin
