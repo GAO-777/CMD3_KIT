@@ -1,0 +1,1128 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 21:48:50
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0010 VERI-ERROR] 'Skeleton_package' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:1)
+[EFX-0010 VERI-ERROR] 'NUM_MASTERS' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:35)
+[EFX-0010 VERI-ERROR] range must be bounded by constant expressions (VERI-1952) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:35)
+[EFX-0010 VERI-ERROR] 'NUM_MASTERS' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:36)
+[EFX-0010 VERI-ERROR] range must be bounded by constant expressions (VERI-1952) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:36)
+[EFX-0010 VERI-ERROR] 'NUM_SLAVES' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:46)
+[EFX-0010 VERI-ERROR] range must be bounded by constant expressions (VERI-1952) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:46)
+[EFX-0010 VERI-ERROR] 'NUM_SLAVES' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:47)
+[EFX-0010 VERI-ERROR] range must be bounded by constant expressions (VERI-1952) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:47)
+[EFX-0010 VERI-ERROR] 'NUM_MASTERS' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:100)
+[EFX-0010 VERI-ERROR] 'TEST_RAM_OFFSET' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:137)
+[EFX-0010 VERI-ERROR] 'TEST_RAM_OFFSET' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:138)
+[EFX-0010 VERI-ERROR] 'USB_IFace_OFFSET' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:142)
+[EFX-0010 VERI-ERROR] 'USB_IFace_OFFSET' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:143)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:175)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:176)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:183)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:184)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:185)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 21:49:56
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:175)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:176)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:183)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:184)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:185)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:186)
+[EFX-0010 VERI-ERROR] procedural assignment to a non-register 'data_bus' is not permitted (VERI-1100) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:187)
+[EFX-0010 VERI-ERROR] module 'TrionT8_KIT' is ignored due to previous errors (VERI-1072) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:279)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 21:51:20
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'Prj_PLL' (VERI-1063) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:77)
+[EFX-0012 VERI-INFO] module 'TrionT8_KIT' remains a black box due to errors in its contents (VERI-1073) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0021 ERROR] Verific elaboration of module 'TrionT8_KIT' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:21:29
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'Arbiter1' (VERI-1063) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:112)
+[EFX-0012 VERI-INFO] module 'TrionT8_KIT' remains a black box due to errors in its contents (VERI-1073) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0021 ERROR] Verific elaboration of module 'TrionT8_KIT' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:22:15
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'Arbiter1' (VERI-1063) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:112)
+[EFX-0012 VERI-INFO] module 'TrionT8_KIT' remains a black box due to errors in its contents (VERI-1073) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0021 ERROR] Verific elaboration of module 'TrionT8_KIT' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:22:40
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'USB_RAM_Reg' (VERI-1063) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:234)
+[EFX-0012 VERI-INFO] module 'TrionT8_KIT' remains a black box due to errors in its contents (VERI-1073) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0021 ERROR] Verific elaboration of module 'TrionT8_KIT' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:23:06
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'Dual_Port_RAM' (VERI-1063) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:371)
+[EFX-0012 VERI-INFO] module 'USB_RAM_Reg' remains a black box due to errors in its contents (VERI-1073) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0012 VERI-INFO] module 'TrionT8_KIT' remains a black box due to errors in its contents (VERI-1073) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0021 ERROR] Verific elaboration of module 'TrionT8_KIT' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:23:37
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0265 ERROR] Bi-directional port 'FT_Data_Bus[7]' is not supported in this device.
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:36:44
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0265 ERROR] Bi-directional port 'FT_Data_Bus[7]' is not supported in this device.
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:41:37
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_IN', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OUT', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OE', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:212)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_Data_Bus', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_Out' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0011 VERI-WARNING] expression size 8 truncated to fit in target size 1 (VERI-1209) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0011 VERI-WARNING] net 'FT_ZZ' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_Out[0]' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_IN' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'LedR' wire 'LedR' is not driven.
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[1]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[2]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[3]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[4]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[5]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[6]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[0]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[1]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[2]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[3]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[4]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[5]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[6]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[8]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[9]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[10]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[11]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[12]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[13]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[14]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[15]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (wren_b=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedR'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:17)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk100'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:31)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:32)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_Direct_In. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:58)
+[EFX-0200 WARNING] Removing redundant signal : USB_AddrBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:59)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_ZZ'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_Out[0]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_IN'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 1 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 1s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 0, ed: 0, lv: 1, pw: 2.97
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0410 ERROR] Signal driving output port 'LedB' is tristated. This is not supported. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:42:52
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_IN', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OUT', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OE', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:212)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_Data_Bus', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_Out' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0011 VERI-WARNING] expression size 8 truncated to fit in target size 1 (VERI-1209) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0011 VERI-WARNING] net 'FT_ZZ' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_Out[0]' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_IN' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'LedR' wire 'LedR' is not driven.
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[1]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[2]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[3]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[4]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[5]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[6]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[0]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[1]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[2]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[3]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[4]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[5]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[6]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[8]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[9]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[10]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[11]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[12]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[13]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[14]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[15]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (wren_b=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedR'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:17)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk100'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:31)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:32)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_Direct_In. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:58)
+[EFX-0200 WARNING] Removing redundant signal : USB_AddrBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:59)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_ZZ'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_Out[0]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_IN'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" end (Real time : 1s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 1 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 0, ed: 0, lv: 1, pw: 0.94
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0410 ERROR] Signal driving output port 'LedB' is tristated. This is not supported. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:43:00
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_IN', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OUT', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OE', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:212)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_Data_Bus', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_Out' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0011 VERI-WARNING] expression size 8 truncated to fit in target size 1 (VERI-1209) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0011 VERI-WARNING] net 'FT_ZZ' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_Out[0]' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_IN' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'LedR' wire 'LedR' is not driven.
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[1]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[2]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[3]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[4]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[5]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[6]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[0]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[1]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[2]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[3]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[4]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[5]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[6]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[8]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[9]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[10]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[11]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[12]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[13]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[14]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[15]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (wren_b=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedR'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:17)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk100'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:31)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:32)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_Direct_In. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:58)
+[EFX-0200 WARNING] Removing redundant signal : USB_AddrBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:59)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_ZZ'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_Out[0]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_IN'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 1 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 0, ed: 0, lv: 0, pw: 0.00
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0011 VERI-WARNING] Input/Inout Port quartz_clk is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_TX_Enable_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_RX_Full_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_PWR_n is unconnected and will be removed 
+[EFX-0010 VERI-ERROR] Post-synthesis netlist has only vcc and gnd nets. Legal, but will cause router to crash. 
+[EFX-0012 VERI-INFO] Found 4 warnings in the post-synthesis netlist. 
+[EFX-0012 VERI-INFO] Found 1 errors in the post-synthesis netlist. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:43:15
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_IN', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OUT', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OE', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:212)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_Data_Bus', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_Out' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0011 VERI-WARNING] expression size 8 truncated to fit in target size 1 (VERI-1209) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:237)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0011 VERI-WARNING] net 'FT_ZZ' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_Out[0]' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_IN' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'LedR' wire 'LedR' is not driven.
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[1]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[2]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[3]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[4]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[5]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[6]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[0]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[1]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[2]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[3]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[4]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[5]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[6]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[8]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[9]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[10]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[11]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[12]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[13]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[14]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[15]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (wren_b=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedR'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:17)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk100'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:31)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:32)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_Direct_In. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:58)
+[EFX-0200 WARNING] Removing redundant signal : USB_AddrBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:59)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_ZZ'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:199)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_Out[0]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:201)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_IN'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 1 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 0, ed: 0, lv: 0, pw: 0.00
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0011 VERI-WARNING] Input/Inout Port quartz_clk is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_TX_Enable_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_RX_Full_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_PWR_n is unconnected and will be removed 
+[EFX-0010 VERI-ERROR] Post-synthesis netlist has only vcc and gnd nets. Legal, but will cause router to crash. 
+[EFX-0012 VERI-INFO] Found 4 warnings in the post-synthesis netlist. 
+[EFX-0012 VERI-INFO] Found 1 errors in the post-synthesis netlist. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:44:37
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_IN', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OUT', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0012 VERI-INFO] undeclared symbol 'FT_DATA_OE', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:212)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0011 VERI-WARNING] port 'q_a' remains unconnected for this instance (VERI-1927) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:276)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0012 VERI-INFO] compiling module 'USB_RAM_Reg' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:13)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'FT_DATA_Out' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:211)
+[EFX-0011 VERI-WARNING] actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:232)
+[EFX-0012 VERI-INFO] compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:11)
+[EFX-0012 VERI-INFO] extracting RAM for identifier 'ram' (VERI-2571) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:273)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0011 VERI-WARNING] net 'FT_DATA_IN' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'LedR' wire 'LedR' is not driven.
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[1]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[2]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[3]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[4]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[5]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[6]=0).
+[EFX-0266 WARNING] Module Instance 'USB_RAM_Reg_inst' input pin tied to constant (FT_DATA_In[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[0]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[1]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[2]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[3]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[4]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[5]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[6]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[8]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[9]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[10]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[11]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[12]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[13]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[14]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[15]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (wren_b=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedR'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:17)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk100'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:31)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:32)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:50)
+[EFX-0200 WARNING] Removing redundant signal : USB_Direct_In. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:58)
+[EFX-0200 WARNING] Removing redundant signal : USB_AddrBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:59)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_IN'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:210)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 1 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 0, ed: 0, lv: 0, pw: 0.00
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0011 VERI-WARNING] Input/Inout Port quartz_clk is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_TX_Enable_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_RX_Full_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_PWR_n is unconnected and will be removed 
+[EFX-0010 VERI-ERROR] Post-synthesis netlist has only vcc and gnd nets. Legal, but will cause router to crash. 
+[EFX-0012 VERI-INFO] Found 4 warnings in the post-synthesis netlist. 
+[EFX-0012 VERI-INFO] Found 1 errors in the post-synthesis netlist. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:45:10
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0011 VERI-WARNING] non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv:43)
+[EFX-0012 VERI-INFO] compiling module 'TrionT8_KIT' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:2)
+[EFX-0012 VERI-INFO] compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv:3)
+[EFX-0011 VERI-WARNING] net 'clk100' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0011 VERI-WARNING] net 'address_valid' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:37)
+[EFX-0011 VERI-WARNING] net 'dev_sel[1]' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:47)
+[EFX-0011 VERI-WARNING] net 'USB_AccessRequest' does not have a driver (VDB-1002) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:53)
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'FT_WR_Strobe' wire 'FT_WR_Strobe' is not driven.
+[EFX-0256 WARNING] The primary output port 'FT_RD_Strobe_n' wire 'FT_RD_Strobe_n' is not driven.
+[EFX-0256 WARNING] The primary output port 'USB_Status_LED' wire 'USB_Status_LED' is not driven.
+[EFX-0256 WARNING] The primary output port 'LedR' wire 'LedR' is not driven.
+[EFX-0256 WARNING] The primary output port 'LedG' wire 'LedG' is not driven.
+[EFX-0256 WARNING] The primary output port 'LedB' wire 'LedB' is not driven.
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_WR_Strobe'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:11)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_RD_Strobe_n'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:12)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'USB_Status_LED'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:15)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedR'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:17)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedG'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:18)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'LedB'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:19)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk100'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:30)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:31)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:32)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'address_valid'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:37)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : address_bus[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : data_bus[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:44)
+[EFX-0200 WARNING] Removing redundant signal : data_bus[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:44)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'dev_sel[1]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:47)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'dev_sel[0]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:47)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 0, ed: 0, lv: 0, pw: 0.00
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0011 VERI-WARNING] Input/Inout Port quartz_clk is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_TX_Enable_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_RX_Full_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port FT_PWR_n is unconnected and will be removed 
+[EFX-0010 VERI-ERROR] Post-synthesis netlist has only vcc and gnd nets. Legal, but will cause router to crash. 
+[EFX-0012 VERI-INFO] Found 4 warnings in the post-synthesis netlist. 
+[EFX-0012 VERI-INFO] Found 1 errors in the post-synthesis netlist. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Dec 12, 2022 22:45:51
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.1/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0011 VERI-WARNING] parameter 'NUM_MASTERS' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:6)
+[EFX-0011 VERI-WARNING] parameter 'NUM_SLAVES' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:7)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:14)
+[EFX-0011 VERI-WARNING] parameter 'USB_IFace_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:15)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:18)
+[EFX-0011 VERI-WARNING] parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv:19)
+[EFX-0011 VERI-WARNING] /* is inside a comment (VERI-1049) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:70)
+[EFX-0012 VERI-INFO] undeclared symbol 'USB_AccessGranted', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:91)
+[EFX-0012 VERI-INFO] undeclared symbol 'RAM_Select', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:93)
+[EFX-0012 VERI-INFO] undeclared symbol 'USB_Select', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:94)
+[EFX-0012 VERI-INFO] undeclared symbol 'clk100', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:105)
+[EFX-0012 VERI-INFO] undeclared symbol 'barq', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:106)
+[EFX-0012 VERI-INFO] undeclared symbol 'bagd', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:107)
+[EFX-0012 VERI-INFO] undeclared symbol 'target_ready', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:108)
+[EFX-0012 VERI-INFO] undeclared symbol 'address_valid', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:109)
+[EFX-0012 VERI-INFO] undeclared symbol 'data_strobe', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:110)
+[EFX-0012 VERI-INFO] undeclared symbol 'arbiter_error', assumed default net type 'wire' (VERI-2561) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:111)
+[EFX-0010 VERI-ERROR] */ is outside a comment (VERI-1189) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:129)
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'barq' (VERI-1011) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:85)
+[EFX-0010 VERI-ERROR] 'USB_AccessRequest' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:85)
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'barq' (VERI-1011) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:86)
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'barq' (VERI-1011) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:87)
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'barq' (VERI-1011) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:88)
+[EFX-0010 VERI-ERROR] cannot index into non-array type logic for 'bagd' (VERI-1011) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:91)
+[EFX-0010 VERI-ERROR] 'dev_sel' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:93)
+[EFX-0010 VERI-ERROR] 'dev_sel' is not declared (VERI-1128) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:94)
+[EFX-0010 VERI-ERROR] module 'TrionT8_KIT' is ignored due to previous errors (VERI-1072) (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:279)
