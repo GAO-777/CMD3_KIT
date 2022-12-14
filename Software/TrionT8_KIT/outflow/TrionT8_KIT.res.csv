@@ -1,0 +1,12 @@
+sep=\t
+Module Resource Usage Distribution Estimates
+Generated at: Dec 14, 2022 08:45:47
+
+Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module	         FFs	        ADDs	        LUTs	      RAMs	 DSP/MULTs
+TrionT8_KIT:TrionT8_KIT                                     	     205(3)	      73(0)	    459(37)	    10(0)	     0(0)	
+ +Arbiter_inst:Arbiter1(CLK_MAX_TIMEOUT=12)                 	     15(15)	       6(6)	     31(31)	     0(0)	     0(0)	
+ +USB_RAM_Reg_inst:USB_RAM_Reg                              	   187(187)	     67(67)	   391(385)	     8(0)	     0(0)	
+  +USB_CMDL_RAM:Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048) 	       0(0)	       0(0)	       6(6)	     8(8)	     0(0)	
+ +Dual_Port_RAM_inst:Dual_Port_RAM(ADDR_WIDTH=8)            	       0(0)	       0(0)	       0(0)	     2(2)	     0(0)	

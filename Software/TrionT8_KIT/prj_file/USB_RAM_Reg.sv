@@ -634,7 +634,7 @@ assign DirectOut = directout_wire;
     
 always_ff @(posedge clk)
 	condition_access_request <= ( byte_strobe & ((usb_cmdl_ram_addr_cnt >= 4) 
-									& (usb_cmdl_ram_addr_cnt <= length_of_packet-TRAILER_KEY_SYMBOL_NUMBER))
+									& (usb_cmdl_ram_addr_cnt < length_of_packet-TRAILER_KEY_SYMBOL_NUMBER))
 									& (usb_cmdl_ram_addr_cnt[1:0] == 0) & received_packet_is_valid); 
 
 	

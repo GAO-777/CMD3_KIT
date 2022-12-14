@@ -1,0 +1,194 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2022.1.226.1.9 
+Compiled: Sep 16 2022.
+
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+
+The Tool Is Based on VPR of University of Toronto,
+a free open source code under MIT license.
+
+
+Running Placement and Routing for Family "Trion", Device "T8Q144" ...
+
+***** Beginning stage netlist pre-processing ... *****
+Successfully Read in Verific binary Netlist dump file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/TrionT8_KIT.vdb".
+***** Beginning VDB Netlist Checker ... *****
+VDB Netlist Checker took 0.0083747 seconds.
+	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
+VDB Netlist Checker virtual memory usage: begin = 12.9 MB, end = 12.92 MB, delta = 0.02 MB
+	VDB Netlist Checker peak virtual memory usage = 52.096 MB
+VDB Netlist Checker resident set memory usage: begin = 23.092 MB, end = 23.316 MB, delta = 0.224 MB
+	VDB Netlist Checker peak resident set memory usage = 61.408 MB
+***** Ending VDB Netlist Checker ... *****
+Reading core interface constraints from 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv'.
+Successfully processed interface constraints file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv".
+Found 0 constant generator nets.
+Pass 0: Swept away 0 nets with no fanout.
+logical_block #0(quartz_clk) has no fanout.
+Removing input.
+logical_block #5(FT_PWR_n) has no fanout.
+Removing input.
+Pass 0: Swept away 2 blocks with no fanout.
+Pass 1: Swept away 0 nets with no fanout.
+Pass 1: Swept away 0 blocks with no fanout.
+Swept away 0 nets and 2 blocks in total.
+Removed 0 LUT buffers.
+Sweeped away 2 nodes.
+Successfully created VPR logical netlist from Verific binary DataBase file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/TrionT8_KIT.vdb".
+Netlist pre-processing took 0.0258198 seconds.
+	Netlist pre-processing took 0.03125 seconds (approximately) in total CPU time.
+Netlist pre-processing virtual memory usage: begin = 12.9 MB, end = 13.936 MB, delta = 1.036 MB
+	Netlist pre-processing peak virtual memory usage = 52.096 MB
+Netlist pre-processing resident set memory usage: begin = 22.492 MB, end = 24.848 MB, delta = 2.356 MB
+	Netlist pre-processing peak resident set memory usage = 61.408 MB
+***** Ending stage netlist pre-processing *****
+
+***** Beginning stage pre-packing ... *****
+***** Ending stage pre-packing *****
+
+***** Beginning stage packing ... *****
+Generate proto netlist for file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/work_pnr\TrionT8_KIT.net_proto" took 0.001 seconds
+Creating IO constraints file 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/work_pnr\TrionT8_KIT.io_place'
+Packing took 0.0049671 seconds.
+	Packing took 0 seconds (approximately) in total CPU time.
+Packing virtual memory usage: begin = 20.4 MB, end = 20.544 MB, delta = 0.144 MB
+	Packing peak virtual memory usage = 52.096 MB
+Packing resident set memory usage: begin = 31.336 MB, end = 31.716 MB, delta = 0.38 MB
+	Packing peak resident set memory usage = 61.408 MB
+***** Ending stage packing *****
+
+***** Beginning stage packed netlist loading ... *****
+Read proto netlist file D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/work_pnr\TrionT8_KIT.net_proto
+Read proto netlist for file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/work_pnr\TrionT8_KIT.net_proto" took 0.01 seconds
+Setup net and block data structure took 0.017 seconds
+Packed netlist loading took 0.0381915 seconds.
+	Packed netlist loading took 0.03125 seconds (approximately) in total CPU time.
+Packed netlist loading virtual memory usage: begin = 20.544 MB, end = 28.46 MB, delta = 7.916 MB
+	Packed netlist loading peak virtual memory usage = 67.62 MB
+Packed netlist loading resident set memory usage: begin = 31.724 MB, end = 39.536 MB, delta = 7.812 MB
+	Packed netlist loading peak resident set memory usage = 78.588 MB
+***** Ending stage packed netlist loading *****
+
+***** Beginning stage pre-placement ... *****
+
+***** Ending stage pre-placement *****
+
+[SDC line 2] create_clock: no pin(s)/port(s)/net(s) specified, only virtual clock 'quartz_clk' will be created. If you don't want this, please specify pin(s)/port(s)/net(s) to the command.
+
+SDC file 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/prj_file/timing_constraint.sdc' parsed successfully.
+1 clocks (including virtual clocks), 0 inputs and 0 outputs were constrained.
+
+***** Beginning stage initial placement ... *****
+Reading core interface constraints from 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv'.
+Successfully processed interface constraints file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv".
+Writing IO placement constraints to 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow\TrionT8_KIT.interface.io'.
+
+Reading placement constraints from 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow\TrionT8_KIT.interface.io'.
+
+Reading placement constraints from 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/work_pnr\TrionT8_KIT.io_place'.
+WARNING(1): FT_DATA_OE has no assigned placement; it will be placed randomly.
+1 IOs will have random placement.
+***** Ending stage initial placement *****
+
+***** Beginning stage placement ... *****
+Create D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow\TrionT8_KIT_after_qp.qdelay
+WARNING(2): No constrained clocks found. Qplacer will be run with timing driven mode disabled.
+NumRegions 1
+Starting Global Placer with 12 threads ...
+
+ ----------     -------  --------------     -------
+  Iteration       WHPWL Worst Slack (ps) Convergence
+ ----------     -------  --------------     -------
+          1       20460     -2147483647         1.4%
+          2       17998     -2147483647         2.6%
+          3       14375     -2147483647         5.5%
+          4       14059     -2147483647         7.9%
+          5       17483     -2147483647         9.6%
+          6       19498     -2147483647        12.3%
+          7       28464     -2147483647        15.2%
+          8       18615     -2147483647        24.6%
+          9       16203     -2147483647        40.4%
+         10       16977     -2147483647        51.8%
+         11       16763     -2147483647        60.2%
+         12       17158     -2147483647        67.0%
+         13       18965     -2147483647        71.2%
+         14       16595     -2147483647        71.2%
+         15       18053     -2147483647        73.5%
+         16       19260     -2147483647        73.5%
+         17       44128     -2147483647        75.7%
+         18       27014     -2147483647        75.7%
+         19       23742     -2147483647        75.9%
+         20       30108     -2147483647        80.0%
+         21       22161     -2147483647        80.0%
+         22       27523     -2147483647        82.0%
+         23       20710     -2147483647        82.0%
+         24       26100     -2147483647        82.9%
+         25       21296     -2147483647        82.9%
+         26       25363     -2147483647        82.9%
+         27       21087     -2147483647        82.9%
+         28       23107     -2147483647        84.0%
+         29       23494     -2147483647        84.0%
+         30       24652     -2147483647        84.0%
+         31       22244     -2147483647        84.0%
+         32       22537     -2147483647        86.3%
+         33       24133     -2147483647        87.0%
+         34       22278     -2147483647        87.0%
+         35       23457     -2147483647        90.0%
+Starting Annealer
+
+ ----------     -------  --------------     -------
+  Iteration       WHPWL  Delay Max (ps)     R Limit
+ ----------     -------  --------------     -------
+          0       20710              NA        30.0
+          1        5795              NA        30.0
+          2        9649              NA        30.0
+          3        7833              NA        30.0
+          4        6618              NA        30.0
+          5        5767              NA        30.0
+          6        5146              NA        30.0
+          7        4674              NA        30.0
+          8        4501              NA        30.0
+          9        4285              NA        30.0
+         10        4130              NA        30.0
+         11        4027              NA        30.0
+         12        3920              NA        30.0
+         13        3814              NA        30.0
+         14        3767              NA        30.0
+         15        3592              NA        30.0
+         16        3614              NA        30.0
+         17        3400              NA        30.0
+         18        3422              NA        30.0
+         19        3382              NA        30.0
+         20        3345              NA        30.0
+         21        3232              NA        29.9
+         22        3282              NA        29.5
+         23        3251              NA        29.0
+         24        3199              NA        28.2
+         25        3094              NA        27.3
+         26        3127              NA        26.2
+         27        3088              NA        25.0
+         28        3080              NA        23.7
+         29        2980              NA        22.6
+         30        3034              NA        21.3
+         31        2958              NA        20.1
+         32        2935              NA        18.4
+No timing data to generate D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow\TrionT8_KIT_after_qp.qdelay
+Placement successful: 637 cells are placed
+Peak congestion smeared over 1/4 of the chip is 0.0455544 at 27,53
+Congestion-weighted HPWL per net: 2.89292
+
+Reading placement constraints from 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.qplace'.
+Finished Realigning Types (156 blocks needed type change)
+
+Completed placement consistency check successfully.
+Successfully created FPGA place file 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.place'
+Placement took 2.07568 seconds.
+	Placement took 2.125 seconds (approximately) in total CPU time.
+Placement virtual memory usage: begin = 28.46 MB, end = 47.752 MB, delta = 19.292 MB
+	Placement peak virtual memory usage = 170.172 MB
+Placement resident set memory usage: begin = 39.548 MB, end = 53.824 MB, delta = 14.276 MB
+	Placement peak resident set memory usage = 174.16 MB
+***** Ending stage placement *****
+

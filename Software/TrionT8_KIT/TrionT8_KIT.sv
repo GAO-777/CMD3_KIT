@@ -2,25 +2,36 @@ import Skeleton_package::*;
 module TrionT8_KIT
 (
 	input  quartz_clk,		// 25MHz Clock from quartz oscillator
-	
-	
-	
-	// USB
-	input  FT_TX_Enable_n,
-	input  FT_RX_Full_n,
+
+    // USB
+    input  FT_TX_Enable_n,
+    input  FT_RX_Full_n,
 	output FT_WR_Strobe,
 	output FT_RD_Strobe_n,
-	//inout  [7:0]FT_Data_Bus,
-	input  FT_PWR_n,
-	output USB_Status_LED,
+    input FT_PWR_n,
+    input wire [7:0]FT_DATA_IN,
+    output logic [7:0]FT_DATA_OUT,
+    output wire FT_DATA_OE, 
     
-	output LedR, 				 
+
+
+
+
+    
+    
+    
+    input  clk100,
+	//output LedR, 				 
     output LedG, 				 
-    output LedB				 
+    //output LedB,			
+  
+    output [8:1]GPIO
 );
 
 
-/*
+
+
+
 
 //=============================================================================
 // 				NETS
@@ -57,24 +68,14 @@ wire [15:0]USB_AddrBusOut;
 wire USB_Select;				
 wire USB_Direct_In;			
 wire [15:0]USB_AddrBus_In;	
-
+logic USB_status;
 
 
 // TEST_RAM
 logic [15:0]test_ram;
 logic RAM_Select;
 
-//=============================================================================
-// 				PLL
-//=============================================================================
-/*
-	Prj_PLL			PLL_inst
-(
-	.inclk0			(quartz_clk), 		
-	.c0				(clk100),				
-	.c1				(clk150),								
-	.locked			(pll_locked)
-);*/
+
 
 
 //=============================================================================
@@ -111,26 +112,12 @@ assign USB_Select = dev_sel[1];
 	.error_o			(arbiter_error)
 );
 
- Arbiter 
- #(
-	  .DeviceMaxNumber (NUM_MASTERS),
-  .ClockMaxTimout 	(12)
- )
- Arbiter1ff
-(
-  .clock	(clk100),                
-  .Reset    (1'b0),                 
-  .BARQ(barq),
-  .BAGD(bagd),
-  .AddressValid(target_ready),                 
-  .TargetReady(address_valid),                      
-  .DataStrobe (data_strobe)                  
-  //.ErrorLight(arbiter_error)                       
-    );*/
+
+
 //=============================================================================
 // 				BUS
 //=============================================================================
-/*
+
 always_comb begin
 	cs = '0;
 	
@@ -196,6 +183,8 @@ end
 //=============================================================================
 // 				BUS
 //=============================================================================
+logic USB_Header_recognized;
+logic USB_Trailer_recognized;
 logic FT_ZZ;
 logic [7:0]FT_DATA_In;
 logic [7:0]FT_DATA_Out;
@@ -209,10 +198,10 @@ USB_RAM_Reg USB_RAM_Reg_inst
 	.FT_WR					(FT_WR_Strobe),				
 	.FT_DATA_In				(FT_DATA_IN),		
 	.FT_DATA_Out			(FT_DATA_OUT),	
-	.FT_ZZ					(FT_DATA_OE),
+	.FT_ZZ					(FT_ZZ),
 	.USB_Active				(USB_active),
-	.Header_recognized		(),
-	.Trailer_recognized		(),
+	.Header_recognized		(USB_Header_recognized),
+	.Trailer_recognized		(USB_Trailer_recognized),
 	.Packet_Proc			(),
 	.RAM_WE					(),
 
@@ -233,19 +222,27 @@ USB_RAM_Reg USB_RAM_Reg_inst
 	
 );
 
+
+//assign FT_DATA_OE = !FT_ZZ;
 //assign FT_DATA_In = FT_Data_Bus; 
-//assign FT_Data_Bus =  FT_ZZ ? FT_DATA_Out : 'Z;   
+//assign FT_DATA_OUT =  FT_ZZ ? FT_DATA_Out : '0;   
 
 always_ff @(posedge clk100)
 	USB_status <= ~FT_PWR_n;
 
 
-
 //assign LedR = arbiter_error
-assign LedG = USB_Error ? 1'b0 : 1'b1; 
-assign LedB = USB_active ? 1'b0 : 1'b1; 
-assign USB_Status_LED = USB_status ? 1'b0 : 1'b1; 
+//assign LedG = USB_Error ? 1'b0 : 1'b1; 
+//assign LedB = USB_active ? 1'b0 : 1'b1; 
+assign LedG = ee ? 1'b0 : 1'b1; 
+logic ee;
+always_ff @(posedge clk100) begin
+    if(rw & dev_sel[0] & data_strobe)
+        ee <= data_bus[0];
+end
 
+assign GPIO[1] = FT_DATA_OE;
+assign GPIO[2] = FT_DATA_OUT[0];
 
 
 
@@ -274,6 +271,6 @@ Dual_Port_RAM
 	.wren_b			(1'b0),
 	.q_b			(test_ram)
 );
-*/
+
 
 endmodule: TrionT8_KIT

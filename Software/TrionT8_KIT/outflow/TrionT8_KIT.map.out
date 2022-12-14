@@ -16,32 +16,182 @@ D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv(15): 
 D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv(18): WARNING: parameter 'TEST_RAM_OFFSET' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418)
 D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Skeleton_package.sv(19): WARNING: parameter 'TEST_RAM_SIZE' declared inside package 'Skeleton_package' shall be treated as localparam (VERI-2418)
 -- Analyzing Verilog file 'D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv' (VERI-1482)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(70): WARNING: /* is inside a comment (VERI-1049)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(91): INFO: undeclared symbol 'USB_AccessGranted', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(93): INFO: undeclared symbol 'RAM_Select', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(94): INFO: undeclared symbol 'USB_Select', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(105): INFO: undeclared symbol 'clk100', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(106): INFO: undeclared symbol 'barq', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(107): INFO: undeclared symbol 'bagd', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(108): INFO: undeclared symbol 'target_ready', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(109): INFO: undeclared symbol 'address_valid', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(110): INFO: undeclared symbol 'data_strobe', assumed default net type 'wire' (VERI-2561)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(111): INFO: undeclared symbol 'arbiter_error', assumed default net type 'wire' (VERI-2561)
--- Verilog file 'D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv' ignored due to errors (VERI-1483)
-INFO: Analysis took 0.0057335 seconds.
-INFO: 	Analysis took 0 seconds (approximately) in total CPU time.
-INFO: Analysis virtual memory usage: begin = 54.66 MB, end = 54.996 MB, delta = 0.336 MB
-INFO: 	Analysis peak virtual memory usage = 55.004 MB
-INFO: Analysis resident set memory usage: begin = 55.508 MB, end = 57.752 MB, delta = 2.244 MB
-INFO: 	Analysis peak resident set memory usage = 57.756 MB
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(41): WARNING: redeclaration of ANSI port 'clk100' is not allowed (VERI-1372)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(191): WARNING: data object 'USB_status' is already declared (VERI-2170)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(71): INFO: previous declaration of 'USB_status' is from here (VERI-1967)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(191): WARNING: second declaration of 'USB_status' is ignored (VERI-1329)
+-- Analyzing Verilog file 'D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv' (VERI-1482)
+-- Analyzing Verilog file 'D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv' (VERI-1482)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv(43): WARNING: non-net output port 'AccessRequest' cannot be initialized at declaration in SystemVerilog mode (VERI-2522)
+-- Analyzing Verilog file 'D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv' (VERI-1482)
+INFO: Analysis took 0.0083926 seconds.
+INFO: 	Analysis took 0.015625 seconds (approximately) in total CPU time.
+INFO: Analysis virtual memory usage: begin = 54.836 MB, end = 55.172 MB, delta = 0.336 MB
+INFO: 	Analysis peak virtual memory usage = 55.18 MB
+INFO: Analysis resident set memory usage: begin = 55.536 MB, end = 57.98 MB, delta = 2.444 MB
+INFO: 	Analysis peak resident set memory usage = 57.984 MB
 INFO: ***** Ending Analysis ... *****
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(129): ERROR: */ is outside a comment (VERI-1189)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(85): ERROR: cannot index into non-array type logic for 'barq' (VERI-1011)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(85): ERROR: 'USB_AccessRequest' is not declared (VERI-1128)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(86): ERROR: cannot index into non-array type logic for 'barq' (VERI-1011)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(87): ERROR: cannot index into non-array type logic for 'barq' (VERI-1011)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(88): ERROR: cannot index into non-array type logic for 'barq' (VERI-1011)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(91): ERROR: cannot index into non-array type logic for 'bagd' (VERI-1011)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(93): ERROR: 'dev_sel' is not declared (VERI-1128)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(94): ERROR: 'dev_sel' is not declared (VERI-1128)
-D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(279): ERROR: module 'TrionT8_KIT' is ignored due to previous errors (VERI-1072)
+INFO: ***** Beginning Elaboration ... *****
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(273): WARNING: port 'q_a' remains unconnected for this instance (VERI-1927)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(2): INFO: compiling module 'TrionT8_KIT' (VERI-1018)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Arbiter1.sv(3): INFO: compiling module 'Arbiter1(CLK_MAX_TIMEOUT=12)' (VERI-1018)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\USB_RAM_Reg.sv(13): INFO: compiling module 'USB_RAM_Reg' (VERI-1018)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv(11): INFO: compiling module 'Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)' (VERI-1018)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv(26): INFO: extracting RAM for identifier 'ram' (VERI-2571)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(221): WARNING: actual bit length 16 differs from formal bit length 9 for port 'AddrBus_In' (VERI-1330)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv(11): INFO: compiling module 'Dual_Port_RAM(ADDR_WIDTH=8)' (VERI-1018)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv(26): INFO: extracting RAM for identifier 'ram' (VERI-2571)
+D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv(270): WARNING: actual bit length 1 differs from formal bit length 16 for port 'data_b' (VERI-1330)
+INFO: Elaboration took 0.0138665 seconds.
+INFO: 	Elaboration took 0.015625 seconds (approximately) in total CPU time.
+INFO: Elaboration virtual memory usage: begin = 55.172 MB, end = 58 MB, delta = 2.828 MB
+INFO: 	Elaboration peak virtual memory usage = 58 MB
+INFO: Elaboration resident set memory usage: begin = 57.992 MB, end = 62.06 MB, delta = 4.068 MB
+INFO: 	Elaboration peak resident set memory usage = 62.064 MB
+INFO: ***** Ending Elaboration ... *****
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+INFO: ***** Beginning Reading Mapping Library ... *****
+-- Analyzing Verilog file 'C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v' (VERI-1482)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(6): INFO: compiling module 'EFX_ADD' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(19): INFO: compiling module 'EFX_FF' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(36): INFO: compiling module 'EFX_COMB4' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(46): INFO: compiling module 'EFX_GBUFCE' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(55): INFO: compiling module 'EFX_IDDR' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(69): INFO: compiling module 'EFX_ODDR' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(85): INFO: compiling module 'EFX_IOBUF' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(97): INFO: compiling module 'EFX_LUT4' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(105): INFO: compiling module 'EFX_MULT' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(140): INFO: compiling module 'EFX_DSP48' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(196): INFO: compiling module 'EFX_DSP24' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(249): INFO: compiling module 'EFX_DSP12' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(302): INFO: compiling module 'EFX_RAM_4K' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(362): INFO: compiling module 'EFX_RAM_5K' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(434): INFO: compiling module 'EFX_DPRAM_5K' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(539): INFO: compiling module 'RAMB5' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(601): INFO: compiling module 'EFX_RAM_10K' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(693): INFO: compiling module 'EFX_RAM10' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(794): INFO: compiling module 'EFX_DPRAM10' (VERI-1018)
+C:/Efinity/2022.1/sim_models/maplib/efinix_maplib.v(924): INFO: compiling module 'EFX_SRL8' (VERI-1018)
+INFO: Reading Mapping Library took 0.0098012 seconds.
+INFO: 	Reading Mapping Library took 0 seconds (approximately) in total CPU time.
+INFO: Reading Mapping Library virtual memory usage: begin = 58.508 MB, end = 58.768 MB, delta = 0.26 MB
+INFO: 	Reading Mapping Library peak virtual memory usage = 58.768 MB
+INFO: Reading Mapping Library resident set memory usage: begin = 62.72 MB, end = 62.776 MB, delta = 0.056 MB
+INFO: 	Reading Mapping Library peak resident set memory usage = 62.78 MB
+INFO: ***** Ending Reading Mapping Library ... *****
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0677 INFO] Zero initialization of uninitialized memory block 'ram'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\prj_file\Dual_Port_RAM.sv:26)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "TrionT8_KIT"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Arbiter1(CLK_MAX_TIMEOUT=12)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" begin
+[EFX-0256 WARNING] The primary output port 'FT_DATA_OE' wire 'FT_DATA_OE' is not driven.
+[EFX-0256 WARNING] The primary output port 'GPIO[8]' wire 'GPIO[8]' is not driven.
+[EFX-0256 WARNING] The primary output port 'GPIO[7]' wire 'GPIO[7]' is not driven.
+[EFX-0256 WARNING] The primary output port 'GPIO[6]' wire 'GPIO[6]' is not driven.
+[EFX-0256 WARNING] The primary output port 'GPIO[5]' wire 'GPIO[5]' is not driven.
+[EFX-0256 WARNING] The primary output port 'GPIO[4]' wire 'GPIO[4]' is not driven.
+[EFX-0256 WARNING] The primary output port 'GPIO[3]' wire 'GPIO[3]' is not driven.
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[0]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[1]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[2]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[3]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[4]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[5]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[6]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[7]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[8]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[9]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[10]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[11]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[12]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[13]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[14]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (data_b[15]=0).
+[EFX-0266 WARNING] Module Instance 'Dual_Port_RAM_inst' input pin tied to constant (wren_b=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'FT_DATA_OE'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:14)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'GPIO[8]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:28)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'GPIO[7]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:28)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'GPIO[6]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:28)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'GPIO[5]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:28)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'GPIO[4]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:28)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'GPIO[3]'. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : clk150. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:42)
+[EFX-0200 WARNING] Removing redundant signal : pll_locked. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:43)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[14]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[13]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[12]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[11]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[10]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[9]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[8]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[7]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[6]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[5]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[4]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[3]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[2]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[1]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_DataBus_In[0]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:61)
+[EFX-0200 WARNING] Removing redundant signal : USB_Direct_In. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:69)
+[EFX-0200 WARNING] Removing redundant signal : USB_AddrBus_In[15]. (D:\Cloud\Github\CMD3_KIT\Software\TrionT8_KIT\TrionT8_KIT.sv:70)
+[EFX-0200 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=11,NUM_WORDS=2048)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "USB_RAM_Reg" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Dual_Port_RAM(ADDR_WIDTH=8)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 1 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "TrionT8_KIT" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Clock Network clk100 with 205 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 62 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 5s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 457, ed: 1541, lv: 7, pw: 910.39
+[EFX-0000 INFO] ... LUT mapping end (Real time : 3s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Clock Network n15 with 205 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+INFO: ***** Beginning VDB Netlist Checker ... *****
+WARNING: Input/Inout Port quartz_clk is unconnected and will be removed
+WARNING: Input/Inout Port FT_PWR_n is unconnected and will be removed
+INFO: Found 2 warnings in the post-synthesis netlist.
+INFO: VDB Netlist Checker took 0.007225 seconds.
+INFO: 	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
+INFO: VDB Netlist Checker virtual memory usage: begin = 75.852 MB, end = 75.852 MB, delta = 0 MB
+INFO: 	VDB Netlist Checker peak virtual memory usage = 98.468 MB
+INFO: VDB Netlist Checker resident set memory usage: begin = 82.052 MB, end = 82.1 MB, delta = 0.048 MB
+INFO: 	VDB Netlist Checker peak resident set memory usage = 101.588 MB
+INFO: ***** Ending VDB Netlist Checker ... *****
+-- Writing netlist 'TrionT8_KIT' to Verilog file 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.map.v' (VDB-1030)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	73
+[EFX-0000 INFO] EFX_LUT4        : 	459
+[EFX-0000 INFO] EFX_FF          : 	205
+[EFX-0000 INFO] EFX_RAM_5K      : 	2
+[EFX-0000 INFO] EFX_DPRAM_5K    : 	8
+[EFX-0000 INFO] EFX_GBUFCE      : 	1
+[EFX-0000 INFO] =============================== 

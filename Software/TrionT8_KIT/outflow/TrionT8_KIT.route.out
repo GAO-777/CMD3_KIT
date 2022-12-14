@@ -1,0 +1,107 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2022.1.226.1.9 
+Compiled: Sep 16 2022.
+
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+
+The Tool Is Based on VPR of University of Toronto,
+a free open source code under MIT license.
+
+
+Running Placement and Routing for Family "Trion", Device "T8Q144" ...
+
+***** Beginning stage routing graph generation ... *****
+Read ipin pattern from C:/Efinity/2022.1/arch/./ipin_oph.xml
+Finished parsing ipin pattern file 'C:/Efinity/2022.1/arch/./ipin_oph.xdb'.
+Finished parsing switch_block file 'C:/Efinity/2022.1/arch/.\sb_connectivity_subset.xdb'.
+BuildGraph process took 3.73062 seconds.
+	BuildGraph process took 3.65625 seconds (approximately) in total CPU time.
+BuildGraph process virtual memory usage: begin = 49.1 MB, end = 418.224 MB, delta = 369.124 MB
+	BuildGraph process peak virtual memory usage = 425.86 MB
+BuildGraph process resident set memory usage: begin = 54.864 MB, end = 415.116 MB, delta = 360.252 MB
+	BuildGraph process peak resident set memory usage = 422.28 MB
+check rr_graph process took 0.0812248 seconds.
+	check rr_graph process took 0.078125 seconds (approximately) in total CPU time.
+check rr_graph process virtual memory usage: begin = 455.996 MB, end = 455.996 MB, delta = 0 MB
+	check rr_graph process peak virtual memory usage = 466.312 MB
+check rr_graph process resident set memory usage: begin = 452.824 MB, end = 452.884 MB, delta = 0.06 MB
+	check rr_graph process peak resident set memory usage = 463.176 MB
+Generated 1169519 RR nodes and 4444558 RR edges
+This design has 0 global control net(s). See D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow\TrionT8_KIT.route.rpt for details.
+Routing graph took 3.88762 seconds.
+	Routing graph took 3.8125 seconds (approximately) in total CPU time.
+Routing graph virtual memory usage: begin = 47.752 MB, end = 417.076 MB, delta = 369.324 MB
+	Routing graph peak virtual memory usage = 466.312 MB
+Routing graph resident set memory usage: begin = 53.828 MB, end = 414.096 MB, delta = 360.268 MB
+	Routing graph peak resident set memory usage = 463.176 MB
+***** Ending stage routing graph generation *****
+
+***** Beginning stage routing ... *****
+[SDC line 2] create_clock: no pin(s)/port(s)/net(s) specified, only virtual clock 'quartz_clk' will be created. If you don't want this, please specify pin(s)/port(s)/net(s) to the command.
+
+SDC file 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/prj_file/timing_constraint.sdc' parsed successfully.
+1 clocks (including virtual clocks), 0 inputs and 0 outputs were constrained.
+
+
+ ---------      -------     --------------      -------------
+ Iteration      Overuse     Crit Path (ns)      Calc Time (s)
+ ---------      -------     --------------      -------------
+         1         2066             -1e+09              0.141
+         2          206             -1e+09               0.16
+         3           31             -1e+09              0.113
+         4            0             -1e+09             0.0478
+
+Successfully routed netlist after 4 routing iterations and 2019514 heapops
+Completed net delay value cross check successfully.
+
+***** Beginning stage routing check ... *****
+***** Ending stage routing check *****
+
+
+Serial number (magic cookie) for the routing is: 1697861431
+Netlist fully routed.
+
+Successfully created FPGA route file 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.route'
+Routing took 0.759016 seconds.
+	Routing took 0.734375 seconds (approximately) in total CPU time.
+Routing virtual memory usage: begin = 417.076 MB, end = 414.348 MB, delta = -2.728 MB
+	Routing peak virtual memory usage = 509.712 MB
+Routing resident set memory usage: begin = 414.1 MB, end = 413.52 MB, delta = -0.58 MB
+	Routing peak resident set memory usage = 485.428 MB
+***** Ending stage routing *****
+
+***** Beginning stage final timing analysis ... *****
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+
+
+
+Write Timing Report to "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow\TrionT8_KIT.timing.rpt" ...
+final timing analysis took 0.135151 seconds.
+	final timing analysis took 0.140625 seconds (approximately) in total CPU time.
+final timing analysis virtual memory usage: begin = 414.348 MB, end = 414.348 MB, delta = 0 MB
+	final timing analysis peak virtual memory usage = 509.712 MB
+final timing analysis resident set memory usage: begin = 413.528 MB, end = 413.832 MB, delta = 0.304 MB
+	final timing analysis peak resident set memory usage = 485.428 MB
+***** Ending stage final timing analysis *****
+
+***** Beginning stage bitstream generation ... *****
+Reading core interface constraints from 'D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv'.
+Successfully processed interface constraints file "D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv".
+Finished writing bitstream file D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/work_pnr\TrionT8_KIT.lbf.
+Bitstream generation took 0.44984 seconds.
+	Bitstream generation took 0.4375 seconds (approximately) in total CPU time.
+Bitstream generation virtual memory usage: begin = 414.348 MB, end = 450.764 MB, delta = 36.416 MB
+	Bitstream generation peak virtual memory usage = 509.712 MB
+Bitstream generation resident set memory usage: begin = 413.852 MB, end = 449.312 MB, delta = 35.46 MB
+	Bitstream generation peak resident set memory usage = 485.428 MB
+***** Ending stage bitstream generation *****
+
+The entire flow of EFX_PNR took 10.2529 seconds.
+	The entire flow of EFX_PNR took 9.40625 seconds (approximately) in total CPU time.
+The entire flow of EFX_PNR virtual memory usage: begin = 5.32 MB, end = 66.66 MB, delta = 61.34 MB
+	The entire flow of EFX_PNR peak virtual memory usage = 509.712 MB
+The entire flow of EFX_PNR resident set memory usage: begin = 11.384 MB, end = 73.996 MB, delta = 62.612 MB
+	The entire flow of EFX_PNR peak resident set memory usage = 485.428 MB
