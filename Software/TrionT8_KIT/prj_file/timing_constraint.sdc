@@ -1,3 +1,3 @@
 # Constrain clock port clk with a 40-ns requirement
-create_clock -name quartz_clk -period 40.000
 
+create_clock -period 40 [get_ports quartz_clk]

@@ -1,7 +1,7 @@
 
 # Efinity Interface Configuration
 # Version: 2022.1.226.1.9
-# Date: 2022-12-14 08:46
+# Date: 2022-12-14 12:59
 
 # Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -44,5 +44,9 @@ output, 160, 104, 2, __bypass__, GPIO[5]
 output, 160, 107, 0, __bypass__, GPIO[6]
 output, 160, 142, 0, __bypass__, GPIO[7]
 output, 160, 144, 2, __bypass__, GPIO[8]
+output, 0, 67, 0, __bypass__, Led_bus[0]
+output, 0, 84, 2, __bypass__, Led_bus[1]
+output, 0, 87, 0, __bypass__, Led_bus[2]
+output, 0, 89, 2, __bypass__, Led_bus[3]
 output, 0, 64, 2, __bypass__, LedG
 optional input, 18, 243, 3, __bypass__, quartz_clk

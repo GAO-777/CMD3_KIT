@@ -57,10 +57,10 @@ port (
 	GPIOL_08_CDI0            : linkage bit;
 	GPIOL_09_CDI1            : linkage bit;
 	GPIOL_12_CDI2            : out bit;
-	GPIOL_13_CDI3            : linkage bit;
-	GPIOL_20_CTRL0_CDI4      : linkage bit;
-	GPIOL_21_CTRL1_CDI5      : linkage bit;
-	GPIOL_22_CTRL2           : linkage bit;
+	GPIOL_13_CDI3            : out bit;
+	GPIOL_20_CTRL0_CDI4      : out bit;
+	GPIOL_21_CTRL1_CDI5      : out bit;
+	GPIOL_22_CTRL2           : out bit;
 	GPIOL_24_CLK0            : linkage bit;
 	GPIOL_25_CLK1            : linkage bit;
 	GPIOL_31_CLK7_CDI6       : linkage bit;
@@ -1161,16 +1161,16 @@ attribute BOUNDARY_REGISTER of T8Q144 : entity is
 	"572 (BC_1, *, internal, X)," &
 
 	"573 (BC_1, *, internal, X)," &
-	"574 (BC_1, *, internal, 1)," &
-	"575 (BC_1, *, internal, X)," &
+	"574 (BC_1, *, control, 1)," &
+	"575 (BC_1, GPIOL_22_CTRL2, output3, X, 574, 1, Z)," &
 
 	"576 (BC_1, *, internal, X)," &
-	"577 (BC_1, *, internal, 1)," &
-	"578 (BC_1, *, internal, X)," &
+	"577 (BC_1, *, control, 1)," &
+	"578 (BC_1, GPIOL_21_CTRL1_CDI5, output3, X, 577, 1, Z)," &
 
 	"579 (BC_1, *, internal, X)," &
-	"580 (BC_1, *, internal, 1)," &
-	"581 (BC_1, *, internal, X)," &
+	"580 (BC_1, *, control, 1)," &
+	"581 (BC_1, GPIOL_20_CTRL0_CDI4, output3, X, 580, 1, Z)," &
 
 	"582 (BC_1, *, internal, X)," &
 	"583 (BC_1, *, internal, 1)," &
@@ -1197,8 +1197,8 @@ attribute BOUNDARY_REGISTER of T8Q144 : entity is
 	"599 (BC_1, *, internal, X)," &
 
 	"600 (BC_1, *, internal, X)," &
-	"601 (BC_1, *, internal, 1)," &
-	"602 (BC_1, *, internal, X)," &
+	"601 (BC_1, *, control, 1)," &
+	"602 (BC_1, GPIOL_13_CDI3, output3, X, 601, 1, Z)," &
 
 	"603 (BC_1, *, internal, X)," &
 	"604 (BC_1, *, control, 1)," &

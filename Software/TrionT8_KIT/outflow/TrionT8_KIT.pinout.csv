@@ -1,7 +1,7 @@
 
 # Efinity Pinout Report
 # Version: 2022.1.226.1.9
-# Date: 2022-12-14 08:46
+# Date: 2022-12-14 12:59
 
 # Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -26,10 +26,10 @@ Pin Number,Pin Name,Signal Name,Direction,Bank,I/O Bank Voltage,I/O Standard,Pul
 13,VCC,,Power,,,,,1.2 V VCC Power
 14,GPIOL_25_CLK1,,Input,1B,3.3 V,,weak pullup,User IO/GCLK
 15,GPIOL_24_CLK0,,Input,1B,3.3 V,,weak pullup,User IO/GCLK
-16,GPIOL_22_CTRL2,,Input,1B,3.3 V,,weak pullup,User IO/GCTRL
-17,GPIOL_21_CTRL1_CDI5,,Input,1B,3.3 V,,weak pullup,User IO/GCTRL
-18,GPIOL_20_CTRL0_CDI4,,Input,1B,3.3 V,,weak pullup,User IO/GCTRL
-19,GPIOL_13_CDI3,,Input,1B,3.3 V,,weak pullup,User IO
+16,GPIOL_22_CTRL2,Led_bus[3],Output,1B,3.3 V,3.3 V LVTTL / LVCMOS,,User IO/GCTRL
+17,GPIOL_21_CTRL1_CDI5,Led_bus[2],Output,1B,3.3 V,3.3 V LVTTL / LVCMOS,,User IO/GCTRL
+18,GPIOL_20_CTRL0_CDI4,Led_bus[1],Output,1B,3.3 V,3.3 V LVTTL / LVCMOS,,User IO/GCTRL
+19,GPIOL_13_CDI3,Led_bus[0],Output,1B,3.3 V,3.3 V LVTTL / LVCMOS,,User IO
 20,GPIOL_12_CDI2,LedG,Output,1B,3.3 V,3.3 V LVTTL / LVCMOS,,User IO
 21,VCCIO1B,,Power,1B,3.3 V,,,VCCIO Power
 22,VCC,,Power,,,,,1.2 V VCC Power
@@ -51,19 +51,19 @@ Pin Number,Pin Name,Signal Name,Direction,Bank,I/O Bank Voltage,I/O Standard,Pul
 38,GPIOB_TXP00,FT_WR_Strobe.TXP,Output,4B,,3.3 V LVTTL / LVCMOS,,User IO
 39,GPIOB_TXN00,FT_RD_Strobe_n.TXN,Output,4B,,3.3 V LVTTL / LVCMOS,,User IO
 40,GPIOB_TXP02,FT_PWR_n.TXP,Input,4B,,3.3 V LVTTL / LVCMOS,,User IO
-41,GPIOB_TXN02,FT_DATA[3].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
-42,GPIOB_TXP04,FT_DATA[6].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
-43,GPIOB_TXN04,FT_DATA[5].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
+41,GPIOB_TXN02,FT_DATA[3].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
+42,GPIOB_TXP04,FT_DATA[6].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
+43,GPIOB_TXN04,FT_DATA[5].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
 44,GND,,Power,,,,,Ground
-45,GPIOB_TXP06,FT_DATA[7].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
-46,GPIOB_TXN06,FT_DATA[1].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
-47,GPIOB_TXP09,FT_DATA[2].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
-48,GPIOB_TXN09,FT_DATA[4].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
+45,GPIOB_TXP06,FT_DATA[7].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
+46,GPIOB_TXN06,FT_DATA[1].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
+47,GPIOB_TXP09,FT_DATA[2].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
+48,GPIOB_TXN09,FT_DATA[4].TXN,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
 49,VCC,,Power,,,,,1.2 V VCC Power
 50,GND,,Power,,,,,Ground
 51,VCCIO4B,,Power,4B,,,,VCCIO Power
 52,VCCIO4B,,Power,4B,,,,VCCIO Power
-53,GPIOB_TXP11,FT_DATA[0].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,weak pullup,User IO
+53,GPIOB_TXP11,FT_DATA[0].TXP,Bidirectional,4B,,3.3 V LVTTL / LVCMOS,,User IO
 54,GPIOB_TXN11,FT_TX_Enable_n.TXN,Input,4B,,3.3 V LVTTL / LVCMOS,,User IO
 55,GPIOB_RXP00,FT_RX_Full_n.RXP,Input,4A,,3.3 V LVTTL / LVCMOS,,User IO
 56,GPIOB_RXN00,,,4A,,,,User IO

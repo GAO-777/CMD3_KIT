@@ -1,5 +1,5 @@
 # Efinity IO Placement 
-# Interface File: D:/Cloud/Github/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv
+# Interface File: D:/Cloud/GitHub/CMD3_KIT/Software/TrionT8_KIT/outflow/TrionT8_KIT.interface.csv
 # Version:        2022.1.226.1.9
 # Date:           Aug 29 2022
 
@@ -9,6 +9,10 @@
 # pin name    	x	y	z
 # --------    	----	----	---
 LedG          	0	64	2
+Led_bus[0]    	0	67	0
+Led_bus[1]    	0	84	2
+Led_bus[2]    	0	87	0
+Led_bus[3]    	0	89	2
 clk100        	0	118	1
 FT_WR_Strobe  	2	0	0
 FT_RD_Strobe_n	3	0	0

@@ -1,7 +1,7 @@
 
 # Efinity Interface Designer SDC
 # Version: 2022.1.226.1.9
-# Date: 2022-12-14 08:46
+# Date: 2022-12-14 12:59
 
 # Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -33,6 +33,14 @@ create_clock -period 10.0000 clk100
 # set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {GPIO[7]}]
 # set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {GPIO[8]}]
 # set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {GPIO[8]}]
+# set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {Led_bus[0]}]
+# set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {Led_bus[0]}]
+# set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {Led_bus[1]}]
+# set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {Led_bus[1]}]
+# set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {Led_bus[2]}]
+# set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {Led_bus[2]}]
+# set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {Led_bus[3]}]
+# set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {Led_bus[3]}]
 # set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {LedG}]
 # set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {LedG}]
 

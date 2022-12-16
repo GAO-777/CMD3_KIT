@@ -2,7 +2,11 @@ import Skeleton_package::*;
 module TrionT8_KIT
 (
 	input  quartz_clk,		// 25MHz Clock from quartz oscillator
-
+    
+    //PLL
+    input  clk100,
+    
+    
     // USB
     input  FT_TX_Enable_n,
     input  FT_RX_Full_n,
@@ -11,20 +15,13 @@ module TrionT8_KIT
     input FT_PWR_n,
     input wire [7:0]FT_DATA_IN,
     output logic [7:0]FT_DATA_OUT,
-    output wire FT_DATA_OE, 
+    output wire [7:0]FT_DATA_OE, 
     
 
-
-
-
-    
-    
-    
-    input  clk100,
 	//output LedR, 				 
     output LedG, 				 
     //output LedB,			
-  
+    output [3:0]Led_bus,
     output [8:1]GPIO
 );
 
@@ -223,7 +220,7 @@ USB_RAM_Reg USB_RAM_Reg_inst
 );
 
 
-//assign FT_DATA_OE = !FT_ZZ;
+assign FT_DATA_OE = FT_ZZ ? '1 : '0;
 //assign FT_DATA_In = FT_Data_Bus; 
 //assign FT_DATA_OUT =  FT_ZZ ? FT_DATA_Out : '0;   
 
@@ -234,19 +231,26 @@ always_ff @(posedge clk100)
 //assign LedR = arbiter_error
 //assign LedG = USB_Error ? 1'b0 : 1'b1; 
 //assign LedB = USB_active ? 1'b0 : 1'b1; 
-assign LedG = ee ? 1'b0 : 1'b1; 
-logic ee;
+
+
+
+
+logic [127:0] cnt;
 always_ff @(posedge clk100) begin
-    if(rw & dev_sel[0] & data_strobe)
-        ee <= data_bus[0];
+    cnt <= cnt +1'b1;    
 end
 
-assign GPIO[1] = FT_DATA_OE;
-assign GPIO[2] = FT_DATA_OUT[0];
+assign GPIO[1] = cnt[10];
+assign GPIO[2] = cnt[31];
+assign LedG = cnt[25] ? 1'b0 : 1'b1; 
 
+logic [3:0]tt;
+always_ff @(posedge clk100) begin
+    if(rw & dev_sel[0] & data_strobe)
+        tt  <= data_bus[3:0];
+end
 
-
-
+assign Led_bus = tt; 
 //=============================================================================
 // 				TEST_RAM
 //=============================================================================
